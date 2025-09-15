@@ -1,6 +1,8 @@
-Here’s the merged README content, combining all of your previous merged content **plus** the new file content. I also added emojis where appropriate to enhance readability. Let me know if you want formatting tweaks!
+<link rel="stylesheet" href="./ehw-notes/css/style.css">
 
----
+# Course Notes: [Course Name] 📚
+
+> Organized notes, exercises, and projects completed while following the **[Course Name]** by **[Instructor Name]** on **[Platform]**.
 
 <link rel="stylesheet" href="./ehw-notes/css/style.css">
 
@@ -15,11 +17,7 @@ Here’s the merged README content, combining all of your previous merged conten
 | Version                  | 00.00.01                                                                |
 | Programmer / Student      | YOUR_NAME_HERE / **Eric Hepperle**                                     |
 
----
 
-# Course Notes: [Course Name] 📚
-
-> Organized notes, exercises, and projects completed while following the **[Course Name]** by **[Instructor Name]** on **[Platform]**.
 
 ---
 
