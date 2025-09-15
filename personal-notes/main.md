@@ -5,7 +5,7 @@
 <a class="bookmark-link" href="#bookmark">JUMP TO BOOKMARK</a>
 
 
-### VID: 01-02
+### ▶️ VID: 01-02
 
 - screenshot.png = 1200x900
 - Create 10 templates:
