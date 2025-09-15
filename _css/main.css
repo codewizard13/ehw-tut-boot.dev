@@ -1,0 +1,39 @@
+body {
+  max-width: 1200px;
+}
+
+.ehw-doc-descr {
+  background: aliceblue;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: .6rem;
+  border: solid gainsboro .5px;
+}
+
+/* Main topic index file headers */
+
+h1[id*="index-for"] {
+  color: cadetblue;
+}
+h1[id*="index-for"]::before {
+  content: '📑';
+}
+
+/* Main topic PLUGIN index headers */
+
+h1[id*="plugin"] {
+  color: red;
+}
+h1[id*="plugin"]::before {
+  content: '🔌';
+}
+
+/* Add WordPress logo before wordpress titles */
+h1[id*="wordpress"]::before {
+  content: url('../_pix/logos/wordpress-logo.svg');
+  transform: scale(0.5) !important;
+  display: inline-block;
+  flex-direction: row;
+  position: relative;
+  top: 1.2rem;
+}
