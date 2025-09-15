@@ -32,6 +32,12 @@
 
 ---
 
+## NOTES ✍️
+
+Notes are located in [personal-notes/](/personal-notes/main.md)
+
+---
+
 ## TECHNOLOGIES 🛠️
 
 <img align="left" alt="HTML5" title="HTML5" width="26px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="padding-right:10px;" />
