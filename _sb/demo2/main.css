@@ -1,0 +1,319 @@
+/**
+ * ==========================================================================
+ * main.css - Consolidated Custom Stylesheet for Full Site
+ * ==========================================================================
+ * DATETIME: 9/25/25, 7:47 am
+ * Contains merged and reorganized CSS from:
+ * - Root styles (_css/main.css, _css/notes.css)
+ * - Personal notes styles (personal-notes/css/main.css, notes.css)
+ * ==========================================================================
+ */
+
+
+/* ==========================================================================
+ * 01. Base & Layout
+ * ==========================================================================
+ */
+body {
+  max-width: 1200px;
+}
+
+.page-wrap {
+  padding: 2rem 0;
+}
+
+
+/* ==========================================================================
+ * 02. Documentation & Root Notes Styles
+ * ==========================================================================
+ */
+/* Documentation description block */
+.ehw-doc-descr {
+  background: aliceblue;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.6rem;
+  border: solid gainsboro 0.5px;
+}
+
+/* Indexed Headers */
+h1[id*="index-for"] {
+  color: cadetblue;
+}
+h1[id*="index-for"]::before {
+  content: '📑';
+}
+
+/* Plugin Headers */
+h1[id*="plugin"] {
+  color: red;
+}
+h1[id*="plugin"]::before {
+  content: '🔌';
+}
+
+/* WordPress headers with logo */
+h1[id*="wordpress"]::before {
+  content: url('../_pix/logos/wordpress-logo.svg');
+  transform: scale(0.5) !important;
+  display: inline-block;
+  flex-direction: row;
+  position: relative;
+  top: 1.2rem;
+}
+
+/* Course notes headers */
+h1[id*="course-notes"] {
+  color: cadetblue;
+}
+
+
+/* ==========================================================================
+ * 03. Tags Section
+ * ==========================================================================
+ */
+#sec-tags {
+  /* Optional additional border or padding can be uncommented */
+}
+#sec-tags ul {
+  list-style: none;
+  display: flex;
+  padding: 0 !important;
+}
+#sec-tags ul li {
+  background: #E6E6FA;
+  padding: 0.1rem 0.66rem;
+  margin: 0.4rem;
+  border-radius: 0.4rem;
+}
+#sec-tags ul li a {
+  color: #000080;
+}
+
+
+/* ==========================================================================
+ * 04. Notes Specific Styles (from notes.css)
+ * ==========================================================================
+ */
+.error {
+  color: brown;
+  font-weight: bold;
+  background: pink;
+  padding: 2rem;
+}
+
+.bookmark-link {
+  background: orange !important;
+  padding: 0.4rem 1rem;
+  border: solid 1px brown;
+  color: white;
+  font-weight: 700;
+}
+
+h3[id^="vid"] {
+  background: olive;
+  color: white;
+  padding: 0.3rem 1rem;
+}
+
+#bookmark {
+  background: orange;
+  display: inline-block;
+  padding: 1rem;
+  border: solid green 4px;
+  transform: skew(20deg);
+}
+
+h6 {
+  padding: 1rem;
+  border: solid gray 2px;
+  border-radius: 1rem;
+  background: #ffffe3;
+}
+
+/* Base message */
+h4 {
+  padding: 1rem;
+  border: solid 2px gray;
+  border-radius: 1rem;
+}
+
+
+/* Gotcha messages */
+h4[id^="gotcha"] {
+  background: mistyrose !important;
+  color: brown;
+  border-color: brown;
+}
+
+/* Tips messages */
+h4[id^="tip"] {
+  background: #eafbea !important;
+}
+
+/* Video timestamp style */
+h4[id*="---"] {
+  background: bisque;
+  padding: 1rem;
+}
+
+/* Code filename style */
+.code-filename {
+  background: beige;
+  min-height: 1rem;
+  display: inline-block;
+  border: solid black 2px;
+  padding: 0.3rem;
+  color: black;
+  font-weight: 500;
+  padding-right: 1rem;
+  border-radius: 0 5px 5px 0;
+  border-left: none !important;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+.code-filename::before {
+  font-family: FontAwesome;
+  content: "\f15c";
+  padding: 0.3rem 0.6rem;
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  margin-right: 0.8rem;
+}
+
+
+/* ==========================================================================
+ * 05. Personal Notes Styles - Header & Navigation (main.css & notes.css)
+ * ==========================================================================
+ */
+header {
+  background: #111;
+  width: 100%;
+  height: 100px;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Top bar main menu */
+header .top-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* horizontal menu */
+}
+
+header .top-bar li {
+  position: relative;
+}
+
+header .top-bar li a {
+  padding: 0.25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .top-bar li a:hover {
+  text-decoration: underline;
+}
+
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+
+header .top-bar li:last-child a {
+  padding-right: 0;
+}
+
+/* Submenu setup and visibility */
+header .top-bar li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 200px;
+  border-radius: 0.5rem;
+  z-index: 999;
+}
+
+header .top-bar li .sub-menu a {
+  color: red;
+  padding: 0.25rem;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+header .top-bar li .sub-menu a:hover {
+  color: black;
+}
+
+/* Show submenu on hover */
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+/* Show nested submenu */
+header .top-bar .menu-item-has-children .sub-menu > .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+/* 2nd level submenu positioning */
+header .top-bar .sub-menu li .sub-menu {
+  left: 100%;
+  top: 0;
+}
+
+
+/* ==========================================================================
+ * 06. Personal Notes Styles - Footer Navigation
+ * ==========================================================================
+ */
+footer {
+  background: #111;
+  width: 100%;
+  height: 100px;
+}
+
+footer .footer-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: black;
+  width: 100%;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+footer .footer-bar li {
+  position: relative;
+}
+footer .footer-bar li a {
+  padding: 0.25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-bar li a:hover {
+  text-decoration: underline;
+}
+footer .footer-bar li:first-child a {
+  padding-left: 0;
+}
+footer .footer-bar li:last-child a {
+  padding-right: 0;
+}
