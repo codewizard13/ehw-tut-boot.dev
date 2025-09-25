@@ -1,1 +1,7 @@
 /* Styles for Notes */
+
+/* Main topic index file headers */
+
+h1[id*="course-notes"] {
+  color: cadetblue;
+}

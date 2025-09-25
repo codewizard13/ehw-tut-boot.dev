@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="../css/notes.css" />
+<!-- 🔗 Root Stylesheets -->
+<link rel="stylesheet" href="../_css/main.css">
+<link rel="stylesheet" href="../_css/notes.css">
+
+<!-- 🔗 Personal Notes Stylesheets -->
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/notes.css">
+
+<!-- 🖼️ Site Logo -->
+![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
 
 # TUTORIAL NOTES
 
@@ -24,15 +33,15 @@
 | File               | Purpose                                                                      |
 | ------------------ | ---------------------------------------------------------------------------- |
 | **functions.php**  | default plugin for WP. Adds additional functionality that WP core is missing |
-| **page.php**       | default page template                                                                             |
-| **single.php**     |single blog post template                                                                              |
+| **page.php**       | default page template                                                        |
+| **single.php**     | single blog post template                                                    |
 | **index.php**      |                                                                              |
 | **front-page.php** |                                                                              |
-| **archive.php**    |post list pages                                                                              |
-| **search.php**     | search results                                                                              |
-| **404.php**        |page not found                                                                              |
-| **header.php**     |default site header                                                                              |
-| **footer.php**     |default site footer                                                                              |
+| **archive.php**    | post list pages                                                              |
+| **search.php**     | search results                                                               |
+| **404.php**        | page not found                                                               |
+| **header.php**     | default site header                                                          |
+| **footer.php**     | default site footer                                                          |
 
 
 ---
