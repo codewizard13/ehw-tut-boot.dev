@@ -1,0 +1,166 @@
+/* Main styles for the theme */
+header {
+  background: #111;
+  width: 100%;
+  height: 100px;
+}
+
+.page-wrap {
+  padding: 2rem 0; /* add padding between header and content */
+}
+
+header .top-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* make menu horizontal */
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+header .top-bar li {
+  position: relative;
+}
+
+header .top-bar li a {
+  padding: .25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+header .top-bar li a:hover {
+  text-decoration: underline;
+}
+
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+
+header .top-bar li:last-child a {
+  padding-right: 0;
+}
+
+
+header .top-bar li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 200px;
+  border-radius: .5rem;
+}
+
+header .top-bar li .sub-menu a {
+  color: red;
+  padding: .25rem;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+header .top-bar li .sub-menu a:hover {
+  color: black;
+}
+
+
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+header .top-bar .menu-item-has-children .sub-menu > .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+/* 2nd level submenu */
+header .top-bar .sub-menu li .sub-menu {
+  left: 100%;
+  top: 0;
+}
+
+
+
+
+
+footer {
+background: #111;
+width: 100%;
+height: 100px;
+}
+footer .footer-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* make menu horizontal */
+  background: black;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+footer .footer-bar li {
+  position: relative;
+}
+
+footer .footer-bar li a {
+  padding: .25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+footer .footer-bar li a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-bar li:first-child a {
+  padding-left: 0;
+}
+
+footer .footer-bar li:last-child a {
+  padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+## PURPOSE
+
+Chapter or Section / Division / Video number go in this folder as subfolders.
+
+Ex:
+
+Course_1/
+	01_Intro/
+	02_Getting Started/
+	03_Data Structures/
+		03.01 - Strings.md
+		03.02 - Arrays.md
+		etc ...
+	04_Loops/
+	... etc.
+
+---

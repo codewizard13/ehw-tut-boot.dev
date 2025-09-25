@@ -37,3 +37,33 @@ h1[id*="wordpress"]::before {
   position: relative;
   top: 1.2rem;
 }
+
+
+
+/* Tags Section
+____________________________________ */
+
+#sec-tags {
+    /* border: solid brown;
+    border-radius: .6rem;
+    padding: .8rem; */
+}
+#sec-tags ul {
+    list-style: none;
+    display: flex;
+    padding: 0 !important;
+}
+#sec-tags ul li {
+    background: #E6E6FA;
+    padding: .1rem .66rem;
+    margin: .4rem;
+    border-radius: .4rem;
+}
+
+#sec-tags ul li a {
+    color: #000080;
+}
+
+
+
+
