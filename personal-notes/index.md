@@ -3,9 +3,8 @@
 <link rel="stylesheet" href="../_css/notes.css">
 
 <!-- 🖼️ Site Logo -->
-![Site Logo](/_pix/logos/logo-ehw-kb.svg){height=32}
+![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
 
-<link rel="stylesheet" href="../css/notes.css" />
 
 <!-- 📝 Title -->
 # 📒 COURSE NOTES: <span class="course-title">[Learn Python](https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9)</span>
@@ -13,29 +12,33 @@
 
 
 <!-- 🧭 Navigation -->
-### [🏚️ Home](../README.md) | [📁 How-To](index.md) | [Bookmark](#bookmark)
+### [🏚️ Home](../README.md) | [📁 How-To](index.md) | [🔖 Bookmark](#bookmark)
 
 <!-- 👤 Metadata -->
-| **Course Name**    | **Custom Elementor Widget: Simple Example**               |
+| File Name            | **personal-notes/index.md**                                                 |
 | -------------------- | --------------------------------------------------------- |
-| File Name            | NOTES.md                                                 |
-| Date Created         | 12/28/23                                                  |
-| Date Modified        | --                                                        |
-| Platform             | Website                                                   |
-| Channel              | [Elementor Developers](https://developers.elementor.com/) |
-| Version              | 0.0.1                                                     |
-| Programmer / Student | **Eric Hepperle**                                         |
-| **Author**:        | Eric L. Hepperle    |
-| ------------------ | ------------------- |
-| **Date Created**:  | 2025-09-11          |
-| **Date Updated**:  | 2025-09-13          |
+| **Date Created**         | 09/25/25                                                  |
+| **Date Modified**        | --                                                        |
+| **Platform**             | Website                                                   |
+| **Channel**              | [Boot.dev](https://www.boot.dev/lessons) |
+| **Version**              | 0.01.00                                                     |
+| **Programmer / Student** | **Eric L. Hepperle**                                         |
 | **AI Assistance**: | ChatGPT, Perplexity |
 
-* **Course URL:** https://developers.elementor.com/docs/widgets/simple-example/
+* **Course URL:** https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9
 
 ---
 
+<!-- SECTION: Tags for short related (1-3 word phrase per tag) concepts (long titled articles belong in the References / See Also section above) -->
+<section id="sec-tags">
 
+## 🏷️ Tags:
+
+- Python
+
+</section>
+
+---
 
 
 

@@ -1,4 +1,9 @@
-<link rel="stylesheet" href="./ehw-notes/css/style.css">
+<!-- 🔗 Custom Stylesheet -->
+<link rel="stylesheet" href="../_css/main.css">
+<link rel="stylesheet" href="../_css/notes.css">
+
+<!-- 🖼️ Site Logo -->
+![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
 
 # Course Notes: Boot.dev 📚
 
@@ -14,8 +19,8 @@
 | Platform             | [Boot.dev](https://www.boot.dev/) |
 | File Name            | README.md                         |
 | Date Created         | 2025‑09‑15                        |
-| Date Modified        | --                                |
-| Version              | 00.00.01                          |
+| Date Modified        | 2025-09-25                        |
+| Version              | 00.01.00                          |
 | Programmer / Student | **Eric L. Hepperle**              |
 
 ---
@@ -31,6 +36,22 @@
 - [ehw-tut-boot.dev](https://github.com/codewizard13/ehw-tut-boot.dev.git)
 
 ---
+
+<!-- SECTION: Tags for short related (1-3 word phrase per tag) concepts (long titled articles belong in the References / See Also section above) -->
+<section id="sec-tags">
+
+## 🏷️ Tags:
+
+- Online Courses
+- Boot.dev
+- Python
+- Gamified Learning
+
+
+</section>
+
+---
+
 
 ## NOTES ✍️
 
