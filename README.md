@@ -1,6 +1,5 @@
 <!-- 🔗 Custom Stylesheet -->
 <link rel="stylesheet" href="../_css/main.css">
-<link rel="stylesheet" href="../_css/notes.css">
 
 <!-- 🖼️ Site Logo -->
 ![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
