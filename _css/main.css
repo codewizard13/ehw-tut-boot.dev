@@ -1,17 +1,58 @@
+/**
+ * ===========================================================================
+ * @file main.css
+ * @date 2025-09-25 07:47 AM CDT
+ * @description
+ *   Consolidated and well-organized custom styles for the entire repo,
+ *   merged from root (_css/) and personal-notes CSS files.
+ *   
+ *   Sections include:
+ *   - Base Layout and Page Wrappers
+ *   - Documentation & Notes Styling (headings, messages, bookmarks)
+ *   - Tags Display
+ *   - Notes-specific UI elements
+ *   - Layout and Flexbox Wrappers (.page-wrap, containers)
+ *   - Header and Navigation Menus (top-bar and submenu styles)
+ *   - Footer and Footer Menus
+ * 
+ * @author Your Name
+ * ===========================================================================
+ */
+
+/* ===========================================================================
+ * 01. Base Layout and Page Wrappers
+ * 
+ * Contains core body constraints and general page wrapper padding.
+ * Applies to <body>, .page-wrap elements.
+ * ===========================================================================
+ */
 body {
   max-width: 1200px;
 }
 
+.page-wrap {
+  padding: 2rem 0;
+}
+
+
+/* ===========================================================================
+ * 02. Documentation and Notes Styling
+ * 
+ * Includes styles for documentation description blocks, main topic headers,
+ * plugin headers, WordPress logos within headings, and course note titles.
+ * Applies largely to <h1> elements and special utility classes.
+ * ===========================================================================
+ */
+/* Documentation description container */
 .ehw-doc-descr {
   background: aliceblue;
   padding: 1rem;
   margin: 1rem auto;
-  border-radius: .6rem;
-  border: solid gainsboro .5px;
+  border-radius: 0.6rem;
+  border: solid gainsboro 0.5px;
 }
 
-/* Main topic index file headers */
-
+/* Indexed main topic file headers */
 h1[id*="index-for"] {
   color: cadetblue;
 }
@@ -19,8 +60,7 @@ h1[id*="index-for"]::before {
   content: '📑';
 }
 
-/* Main topic PLUGIN index headers */
-
+/* Plugin index headers */
 h1[id*="plugin"] {
   color: red;
 }
@@ -28,7 +68,7 @@ h1[id*="plugin"]::before {
   content: '🔌';
 }
 
-/* Add WordPress logo before wordpress titles */
+/* WordPress logo inserted before WordPress headers */
 h1[id*="wordpress"]::before {
   content: url('../_pix/logos/wordpress-logo.svg');
   transform: scale(0.5) !important;
@@ -38,32 +78,286 @@ h1[id*="wordpress"]::before {
   top: 1.2rem;
 }
 
+/* Course notes specific header styling */
+h1[id*="course-notes"] {
+  color: cadetblue;
+}
 
 
-/* Tags Section
-____________________________________ */
-
+/* ===========================================================================
+ * 03. Tags Display Section
+ * 
+ * Styles unordered list of tags, removes default list styling,
+ * applies background, padding, margin, and text coloring.
+ * Affects #sec-tags, #sec-tags ul, li, and links therein.
+ * ===========================================================================
+ */
 #sec-tags {
-    /* border: solid brown;
-    border-radius: .6rem;
-    padding: .8rem; */
+  /* Uncomment for optional borders/padding
+  border: solid brown;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  */
 }
 #sec-tags ul {
-    list-style: none;
-    display: flex;
-    padding: 0 !important;
+  list-style: none;
+  display: flex;
+  padding: 0 !important;
 }
 #sec-tags ul li {
-    background: #E6E6FA;
-    padding: .1rem .66rem;
-    margin: .4rem;
-    border-radius: .4rem;
+  background: #E6E6FA;
+  padding: 0.1rem 0.66rem;
+  margin: 0.4rem;
+  border-radius: 0.4rem;
 }
-
 #sec-tags ul li a {
-    color: #000080;
+  color: #000080;
 }
 
 
+/* ===========================================================================
+ * 04. Notes-Specific UI Elements
+ * 
+ * Provides styling for error messages, bookmarks, video headings,
+ * definition blocks, messages, tips, gotchas, timestamps, and code filename tags.
+ * ===========================================================================
+ */
+.error {
+  color: brown;
+  font-weight: bold;
+  background: pink;
+  padding: 2rem;
+}
+
+.bookmark-link {
+  background: orange !important;
+  padding: 0.4rem 1rem;
+  border: solid 1px brown;
+  color: white;
+  font-weight: 700;
+}
+
+h3[id^="vid"] {
+  background: olive;
+  color: white;
+  padding: 0.3rem 1rem;
+}
+
+#bookmark {
+  background: orange;
+  display: inline-block;
+  padding: 1rem;
+  border: solid green 4px;
+  transform: skew(20deg);
+}
+
+h6 {
+  padding: 1rem;
+  border: solid gray 2px;
+  border-radius: 1rem;
+  background: #ffffe3;
+}
+
+h4 {
+  padding: 1rem;
+  border: solid 2px gray;
+  border-radius: 1rem;
+}
+
+/* Gotchas with distinct background */
+h4[id^="gotcha"] {
+  background: mistyrose !important;
+  color: brown;
+  border-color: brown;
+}
+
+/* Tips with greenish background */
+h4[id^="tip"] {
+  background: #eafbea !important;
+}
+
+/* Video timestamp highlighting */
+h4[id*="---"] {
+  background: bisque;
+  padding: 1rem;
+}
+
+/* Code filename label with FontAwesome icon */
+.code-filename {
+  background: beige;
+  min-height: 1rem;
+  display: inline-block;
+  border: solid black 2px;
+  padding: 0.3rem;
+  color: black;
+  font-weight: 500;
+  padding-right: 1rem;
+  border-radius: 0 5px 5px 0;
+  border-left: none !important;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+.code-filename::before {
+  font-family: FontAwesome;
+  content: "\f15c";
+  padding: 0.3rem 0.6rem;
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  margin-right: 0.8rem;
+}
 
 
+/* ===========================================================================
+ * 05. Layout and Flexbox Wrappers
+ * 
+ * Contains container and page wrapper padding rules supporting flexible layouts.
+ * Provides consistent spacing between header, content, and footer.
+ * ===========================================================================
+ */
+.page-wrap {
+  padding: 2rem 0; /* add padding between header and content */
+}
+
+header .container,
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+/* ===========================================================================
+ * 06. Header and Navigation Menu Styles
+ * 
+ * Complete styling for header background and height,
+ * main navigation menu (top-bar), top-level menu items, submenu behaviors,
+ * including nested dropdowns - with hover display controls and positioning.
+ * ===========================================================================
+ */
+header {
+  background: #111;
+  width: 100%;
+  height: 100px;
+}
+
+header .top-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* make menu horizontal */
+}
+
+header .top-bar li {
+  position: relative;
+}
+
+header .top-bar li a {
+  padding: 0.25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .top-bar li a:hover {
+  text-decoration: underline;
+}
+
+header .top-bar li:first-child a {
+  padding-left: 0;
+}
+
+header .top-bar li:last-child a {
+  padding-right: 0;
+}
+
+/* Submenu: hidden by default */
+header .top-bar li .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 200px;
+  border-radius: 0.5rem;
+  z-index: 999; /* ensures visibility over content */
+}
+
+/* Submenu links */
+header .top-bar li .sub-menu a {
+  color: red;
+  padding: 0.25rem;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+header .top-bar li .sub-menu a:hover {
+  color: black;
+}
+
+/* Show submenu on parent hover */
+header .top-bar > .menu-item-has-children:hover > .sub-menu {
+  display: block;
+}
+
+/* Show nested submenus on hover */
+header .top-bar .menu-item-has-children .sub-menu > .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+/* 2nd level submenu positioning */
+header .top-bar .sub-menu li .sub-menu {
+  left: 100%;
+  top: 0;
+}
+
+
+/* ===========================================================================
+ * 07. Footer and Footer Navigation Styles
+ * 
+ * Styles footer container, footer flex menu bar, links and state on hover,
+ * consistent with header menu styling conventions.
+ * ===========================================================================
+ */
+footer {
+  background: #111;
+  width: 100%;
+  height: 100px;
+}
+
+footer .footer-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* horizontal menu */
+  background: black;
+  width: 100%;
+}
+
+footer .footer-bar li {
+  position: relative;
+}
+
+footer .footer-bar li a {
+  padding: 0.25rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-bar li a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-bar li:first-child a {
+  padding-left: 0;
+}
+
+footer .footer-bar li:last-child a {
+  padding-right: 0;
+}

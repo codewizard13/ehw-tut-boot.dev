@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>main.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!-- 🔗 Root Stylesheets -->
+<link rel="stylesheet" href="../_css/main.css">
+<link rel="stylesheet" href="../_css/notes.css">
+<!-- 🖼️ Site Logo -->
+<p><img src="/_pix/logos/logo-ehw-kb-h32.png" alt="Site Logo"></p>
+<h1 id="tutorial-notes">TUTORIAL NOTES</h1>
+<p><a class="bookmark-link" href="#bookmark">JUMP TO BOOKMARK</a></p>
+<h3 id="%E2%96%B6%EF%B8%8F-vid-01-02">▶️ VID: 01-02</h3>
+<ul>
+<li>screenshot.png = 1200x900</li>
+<li>Create 10 templates:
+<ul>
+<li>functions.php: default plugin for WP</li>
+<li>page.php: template for all page</li>
+<li>single.php: single blog post template</li>
+<li>archive.php: post lists pages</li>
+<li>front-page.php: automatically attaches itself to your homepage. This template automatically loads on the front page</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="vid-03">VID: 03</h3>
+<h4 id="main-theme-template-files">Main Theme Template Files:</h4>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>functions.php</strong></td>
+<td>default plugin for WP. Adds additional functionality that WP core is missing</td>
+</tr>
+<tr>
+<td><strong>page.php</strong></td>
+<td>default page template</td>
+</tr>
+<tr>
+<td><strong>single.php</strong></td>
+<td>single blog post template</td>
+</tr>
+<tr>
+<td><strong>index.php</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>front-page.php</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>archive.php</strong></td>
+<td>post list pages</td>
+</tr>
+<tr>
+<td><strong>search.php</strong></td>
+<td>search results</td>
+</tr>
+<tr>
+<td><strong>404.php</strong></td>
+<td>page not found</td>
+</tr>
+<tr>
+<td><strong>header.php</strong></td>
+<td>default site header</td>
+</tr>
+<tr>
+<td><strong>footer.php</strong></td>
+<td>default site footer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><span class="code-filename">functions.php:</span></p>
+<ul>
+<li>Create template file: <strong>header.php</strong></li>
+<li>Create template file: <strong>footer.php</strong></li>
+</ul>
+<hr>
+<ul>
+<li>Add header.php to front-page.php with:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header(); <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<ul>
+<li>In header we put an <strong>html scaffold</strong></li>
+</ul>
+<hr>
+<ul>
+<li>In <strong>header.php</strong> in VSCode TYPE <code>html:5</code> and press TAB to auto generate HTML5 scaffolding</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+</div></code></pre>
+<ul>
+<li>
+<p>Closing body and html tags in <strong>footer.php</strong></p>
+</li>
+<li>
+<p>Front page will be blank, but can test by seeing if the full html tag contents are in &quot;view source&quot; in code inspector</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Let's enqueue our stylesheet</li>
+</ul>
+<p>wp_head() and wp_footer() are similar to hooks that inject styles into header and footer</p>
+<p><strong>header.php</strong></p>
+<pre class="hljs"><code><div>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span class="hljs-string">"en"</span>&gt;
+&lt;head&gt;
+  &lt;meta charset=<span class="hljs-string">"UTF-8"</span>&gt;
+  &lt;meta http-equiv=<span class="hljs-string">"X-UA-Compatible"</span> content=<span class="hljs-string">"IE=edge"</span>&gt;
+  &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+
+  <span class="hljs-meta">&lt;?php</span> wp_head(); <span class="hljs-meta">?&gt;</span>
+
+&lt;/head&gt;
+&lt;body&gt;
+</div></code></pre>
+<p><strong>footer.php</strong></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> wp_footer(); <span class="hljs-meta">?&gt;</span>
+
+&lt;/body&gt;
+&lt;/html&gt;
+</div></code></pre>
+<ul>
+<li>If you refresh your page the wordpress <strong>admin bar</strong> should now be showing</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>Enqueue stylesheets in <strong>functions.php</strong></p>
+</li>
+<li>
+<p>We are going to be installing <strong>Bootstrap</strong></p>
+</li>
+<li>
+<p>Download compiled css and js from <a href="getbootstrap.com">getbootstrap.com</a></p>
+</li>
+<li>
+<p>Unzip and drag <strong>css/</strong> and <strong>js/</strong> folders into your theme root</p>
+</li>
+<li>
+<p>Create an <strong>images/</strong> folder in theme root also</p>
+</li>
+</ul>
+<h4 id="919---register-styles">@@ 9:19 - Register Styles</h4>
+<h4 id="enqueue-styles-in-functionsphp">Enqueue Styles in functions.php:</h4>
+<ul>
+<li>
+<p>Add <strong>load_css()</strong> function to functions.php</p>
+</li>
+<li>
+<p>Register bootstrap stylesheet</p>
+<ul>
+<li>Give it a handle first -- could be &quot;clownshoes&quot;, but &quot;bootstrap&quot; makes more sense</li>
+<li>Use the .min version of bootstrap.css because it saves loading time <strong>#performance</strong></li>
+<li>Then tell wordpress where to find the bootstrap css file with <strong>get_template_directory_uri()</strong></li>
+<li>The third argument is a list of dependencies (other stylesheets this one may depend on). If not, just type <code>array(),</code></li>
+<li>Fourth arg is version -- can put <code>false</code></li>
+<li>Fifth arg is media, as in for responsive media queries. Just type 'all' unless you have reason not to</li>
+</ul>
+</li>
+<li>
+<p>Immediately after creating function, call it with <code>wp_enqueue_style('bootstrap')</code></p>
+</li>
+</ul>
+<h6 id="def-gettemplatedirectoryuri-tells-wp-the-root-of-the-stylesheet-directory">DEF: <strong>get_template_directory_uri():</strong> tells WP the root of the stylesheet directory</h6>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">load_css</span><span class="hljs-params">()</span> </span>{
+
+  wp_register_style(
+    <span class="hljs-string">'bootstrap'</span>, get_template_directory_uri() . <span class="hljs-string">'/css/bootstrap.min.css'</span>,
+    <span class="hljs-keyword">array</span>(), <span class="hljs-keyword">false</span>, <span class="hljs-string">'all'</span>);
+  wp_enqueue_style(<span class="hljs-string">'bootstrap'</span>);
+
+}
+
+</div></code></pre>
+<ul>
+<li>Add the style to the WP boot sequence with <strong>add_action()</strong>:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">load_css</span><span class="hljs-params">()</span> </span>{
+
+  wp_register_style(
+    <span class="hljs-string">'bootstrap'</span>, get_template_directory_uri() . <span class="hljs-string">'/css/bootstrap.min.css'</span>,
+    <span class="hljs-keyword">array</span>(), <span class="hljs-keyword">false</span>, <span class="hljs-string">'all'</span>);
+  wp_enqueue_style(<span class="hljs-string">'bootstrap'</span>);
+
+}
+add_action(<span class="hljs-string">'wp_enqueue_scripts'</span>, <span class="hljs-string">'load_css'</span>);
+</div></code></pre>
+<ul>
+<li>
+<p>Now, if we go to the homepage and refresh, it will still be blank, but if you view the source code (<strong>CTRL-U</strong>) you should see <code>/css/bootstrap.min.css</code> in a <code>link rel</code> tag.</p>
+</li>
+<li>
+<p>Next, we will load JavaScripts for Bootstrap</p>
+</li>
+<li>
+<p><strong>#GOTCHA:</strong> Bootstrap does have jQuery as a dependency, so ...</p>
+</li>
+<li>
+<p>WordPress automatically ships with jQuery</p>
+</li>
+<li>
+<p><strong>jQuery Migrate:</strong> a patch provided by WordPress which helps you use jQuery plugins that require a newer version jQuery; for backward compatibility</p>
+</li>
+<li>
+<p>Version: false</p>
+</li>
+<li>
+<p>last parameter = &quot;in footer&quot;: true</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">load_js</span><span class="hljs-params">()</span> </span>{
+
+  wp_register_script(<span class="hljs-string">'bootstrap-scripts'</span>, get_template_directory_uri() . <span class="hljs-string">'/js/bootstrap.min.js'</span>,
+  <span class="hljs-string">'jquery'</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span>);
+  wp_enqueue_script(<span class="hljs-string">'bootstrap-scripts'</span>);
+
+}
+add_action(<span class="hljs-string">'wp_enqueue_scripts'</span>, <span class="hljs-string">'load_js'</span>);
+</div></code></pre>
+<ul>
+<li>
+<p>Now, as long as you have registered an enqueued the script and done add action, you should see <code>/js/bootstrap.min.js</code> show up in a <code>script</code> tag before the closing body tag in the page source.</p>
+</li>
+<li>
+<p><strong>#GOTCHA:</strong> If we search for jQuery in the page source, although WordPress automatically includes it in the core, it is not included on the page. To include in your custom theme we need to enqueue it as a script. Enqueue jQuery before the register_script() statements in <strong>load_js()</strong>:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">load_js</span><span class="hljs-params">()</span> </span>{
+
+  wp_enqueue_script(<span class="hljs-string">'jquery'</span>);
+  wp_register_script(<span class="hljs-string">'bootstrap-scripts'</span>, ...
+</div></code></pre>
+<ul>
+<li>Now, if we refresh the page source, jQuery will be in our header.</li>
+</ul>
+<h3 id="vid-04---template-parts--page-templates">VID: 04 - Template Parts &amp; Page Templates</h3>
+<ul>
+<li><strong>#GOTCHA:</strong> Discrepancy - Offscreen after the last vid (03) he added the <code>div class='container'</code> section with the title to <strong>front-page.php</strong> like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">container</span>"&gt;
+    
+    &lt;<span class="hljs-title">h1</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h1</span>&gt;
+
+  &lt;/<span class="hljs-title">div</span>&gt;
+
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<ul>
+<li>ADD some text to the content area on <strong>home</strong> page.</li>
+<li>I added lorem ipsum from https://trumpipsum.net/</li>
+</ul>
+<blockquote>
+<p>You know, it really doesn’t matter what you write as long as you’ve got a young, and beautiful, piece of text. You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. Look at that text! Would anyone use that? Can you imagine that, the text of your next webpage?! I write the best placeholder text, and I'm the biggest developer on the web by far... While that's mock-ups and this is politics, are they really so different? Despite the constant negative ipsum covfefe.</p>
+<p>You're telling the enemy exactly what you're going to do. No wonder you've been fighting Lorem Ipsum your entire adult life. An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.</p>
+<p>An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud. I think my strongest asset maybe by far is my temperament. I have a placeholding temperament.</p>
+<p>An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud. Lorem Ipsum is unattractive, both inside and out. I fully understand why it’s former users left it for something else. They made a good decision. An 'extremely credible source' has called my office and told me that Lorem Ipsum's birth certificate is a fraud.</p>
+</blockquote>
+<ul>
+<li>We'll create some template parts on</li>
+</ul>
+<h6 id="def-template-part---sections-to-help-organize-wordpress-web-page-parts">DEF: template part - sections to help organize WordPress web page parts</h6>
+<ul>
+<li>Create new folder <strong>includes/</strong></li>
+<li>Create new file in includes/ <strong>section-content.php</strong></li>
+<li>Call section-content.php as template part in <strong>front-page.php</strong> with <strong>get_template_part()</strong> function:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_template_part(<span class="hljs-string">'includes/section'</span>, <span class="hljs-string">'content'</span>); <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<ul>
+<li>
+<p><strong>get_template_part()</strong>:</p>
+<ul>
+<li>1st arg: relative path with the first part of the name before the hyphen</li>
+<li>2nd arg: second part of the file name</li>
+</ul>
+</li>
+<li>
+<p>For testing, type &quot;THIS IS THE CONTENT SECTION&quot; in <strong>section-content.php</strong></p>
+</li>
+</ul>
+<h4 id="250---pulling-content-from-database">@@ 2:50 - Pulling Content from Database</h4>
+<ul>
+<li>Now we are going to start pulling content from the database</li>
+<li>The following basically means <strong>if we have some posts, loop through them and instantiate each one until done</strong></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>( have_posts() ): <span class="hljs-keyword">while</span>( have_posts() ): the_post(); <span class="hljs-meta">?&gt;</span>
+
+  <span class="hljs-comment">// DO STUFF</span>
+
+<span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endwhile</span>; <span class="hljs-keyword">else</span>: <span class="hljs-keyword">endif</span>; <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<ul>
+<li>Now, show the content by replacing &quot;// DO STUFF&quot; with a call to <strong>the_content()</strong> like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>( have_posts() ): <span class="hljs-keyword">while</span>( have_posts() ): the_post(); <span class="hljs-meta">?&gt;</span>
+
+  <span class="hljs-meta">&lt;?php</span> the_content(); <span class="hljs-meta">?&gt;</span>
+
+<span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endwhile</span>; <span class="hljs-keyword">else</span>: <span class="hljs-keyword">endif</span>; <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<h4 id="458---page-templates">@@ 4:58 - Page Templates</h4>
+<ul>
+<li>
+<p>Create page <strong>About Us</strong> and type some text in content editor</p>
+</li>
+<li>
+<p><strong>#GOTCHA:</strong> About Us page is blank because the front-page.php only works for the homepage, but every other page uses the <strong>page.php</strong> template</p>
+</li>
+<li>
+<p>In <strong>page.php</strong> add &quot;This is a page template&quot; as the content</p>
+</li>
+<li>
+<p>Now when you refresh the about-us page it should show that text</p>
+</li>
+<li>
+<p>Next, create a <strong>Contact Us</strong> page, but leave the content blank. When you view it, it will automatically display the dummy text</p>
+</li>
+<li>
+<p>Copy-paste from <strong>front-page.php</strong> into into <strong>page.php</strong></p>
+</li>
+</ul>
+<hr>
+<h3 id="how-to-give-each-page-its-own-template">How to give each page its own template</h3>
+<h4 id="700---contact-us-template">@@ 7:00 - Contact Us Template</h4>
+<ul>
+<li>
+<p>Create new template for contact us page in theme root called <strong>template-contactus.php</strong></p>
+</li>
+<li>
+<p>First tell wordpress this is a template with:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-comment">/*
+Template Name: Contact Us
+*/</span>
+<span class="hljs-meta">?&gt;</span>
+
+This is the CONTACT PAGE template
+</div></code></pre>
+<ul>
+<li>
+<p>Now, in the Contact Us page editor, refresh the page and you should see a &quot;Template&quot; dropdown option in the right sidebar.</p>
+</li>
+<li>
+<p>If we choose &quot;Contact Us&quot; in the &quot;Template&quot; dropdown list and update, we will be using the &quot;Contact Us&quot; template</p>
+</li>
+<li>
+<p>Copy-Paste content from page.php and replace dummy text in <strong>template-contactus.php</strong></p>
+</li>
+<li>
+<p>Now, <strong>template-contactus.php</strong> looks like this:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-comment">/*
+Template Name: Contact Us
+*/</span>
+<span class="hljs-meta">?&gt;</span>
+
+<span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">container</span>"&gt;
+    
+    &lt;<span class="hljs-title">h1</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h1</span>&gt;
+
+    &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">content</span>'); ?&gt;
+
+  &lt;/<span class="hljs-title">div</span>&gt;
+
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<h4 id="910---two-column-template-bootstrap">@@ 9:10 - Two Column Template (Bootstrap)</h4>
+<ul>
+<li>Add bootstrap classes to <strong>template-contactus.php</strong>. This is what the file should look like now:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-comment">/*
+Template Name: Contact Us
+*/</span>
+<span class="hljs-meta">?&gt;</span>
+
+<span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+  &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">container</span>"&gt;
+    
+    &lt;<span class="hljs-title">h1</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h1</span>&gt;
+
+    &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">row</span>"&gt;
+
+      &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">col</span>-<span class="hljs-title">lg</span>-6"&gt;<span class="hljs-title">This</span> <span class="hljs-title">is</span> <span class="hljs-title">where</span> <span class="hljs-title">the</span> <span class="hljs-title">contact</span> <span class="hljs-title">form</span> <span class="hljs-title">goes</span>&lt;/<span class="hljs-title">div</span>&gt;
+      &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">col</span>-<span class="hljs-title">lg</span>-6"&gt;
+        &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">content</span>'); ?&gt;
+      &lt;/<span class="hljs-title">div</span>&gt;
+
+    &lt;/<span class="hljs-title">div</span>&gt;
+
+    &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">content</span>'); ?&gt;
+
+  &lt;/<span class="hljs-title">div</span>&gt;
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<h4 id="1010---use-different-headers-on-different-pages">@@ 10:10 - Use different headers on different pages</h4>
+<ul>
+<li>In theme root create new header template <strong>header-secondary.php</strong> with dummy text content of &quot;This is the SECONDARY HEADER&quot;.</li>
+<li>In <strong>front-page.php</strong> add <code>'secondary'</code> as the <strong>get_header()</strong> argument like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header(<span class="hljs-string">'secondary'</span>); <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<ul>
+<li>
+<p>To test if it worked, view home page source and the dummy text should be at the top.</p>
+</li>
+<li>
+<p>Copy the contents of header.php into header-secondary.php so the final result is:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div>&lt;!DOCTYPE html&gt;
+&lt;html lang=<span class="hljs-string">"en"</span>&gt;
+&lt;head&gt;
+  &lt;meta charset=<span class="hljs-string">"UTF-8"</span>&gt;
+  &lt;meta http-equiv=<span class="hljs-string">"X-UA-Compatible"</span> content=<span class="hljs-string">"IE=edge"</span>&gt;
+  &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+
+  <span class="hljs-meta">&lt;?php</span> wp_head(); <span class="hljs-meta">?&gt;</span>
+
+&lt;/head&gt;
+&lt;body&gt;
+  
+  This is the SECONDARY HEADER
+</div></code></pre>
+<ul>
+<li>You could do the same thing for the footer by creating <strong>footer-whatever.php</strong></li>
+</ul>
+<h3 id="vid-05---navigation-menus">VID: 05 - Navigation Menus</h3>
+<h4 id="0030---how-to-enqueue-our-own-custom-stylesheet">@@ 00:30 - How to Enqueue our own custom stylesheet</h4>
+<ul>
+<li>Create new file <strong>main.css</strong> in css/ folder</li>
+</ul>
+<h4 id="gotcha-make-sure-you-enqueue-your-custom-styles-after-all-others-because-you-want-your-styles-to-be-able-to-override-the-defaults-bootstrap-and-all-others">#GOTCHA: Make sure you enqueue your custom styles AFTER all others because you want your styles to be able to override the defaults, bootstrap, and all others.</h4>
+<ul>
+<li>In <strong>functions.php</strong>, duplicate the bootstrap register and enqueue style statements in <strong>load_css()</strong> and replace &quot;bootstrap&quot; and &quot;bootrap.min&quot; with &quot;<strong>main</strong>&quot; like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">load_css</span><span class="hljs-params">()</span> </span>{
+
+  wp_register_style(
+    <span class="hljs-string">'bootstrap'</span>, get_template_directory_uri() . <span class="hljs-string">'/css/bootstrap.min.css'</span>,
+    <span class="hljs-keyword">array</span>(), <span class="hljs-keyword">false</span>, <span class="hljs-string">'all'</span>);
+  wp_enqueue_style(<span class="hljs-string">'bootstrap'</span>);
+
+
+  wp_register_style(
+    <span class="hljs-string">'main'</span>, get_template_directory_uri() . <span class="hljs-string">'/css/main.css'</span>,
+    <span class="hljs-keyword">array</span>(), <span class="hljs-keyword">false</span>, <span class="hljs-string">'all'</span>);
+  wp_enqueue_style(<span class="hljs-string">'main'</span>);
+
+}
+</div></code></pre>
+<ul>
+<li>Verify that the style is enqueued by checking the home page source. Your 'main.css' should appear under the line with 'bootstrap.min.css'.</li>
+</ul>
+<h4 id="211---tidy-up-our-theme">@@ 2:11 - Tidy up our theme</h4>
+<ul>
+<li>In <strong>header.php</strong> add <code>header</code> tag below the opening body tag</li>
+<li>In <strong>main.css</strong> style the header with:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#111</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+}
+</div></code></pre>
+<h4 id="gotcha-make-sure-to-remove-the-secondary-argument-from-the-getheader-statement-in-front-pagephp-or-the-new-header-style-wont-display">#GOTCHA: Make sure to remove the <code>'secondary'</code> argument from the <strong>get_header()</strong> statement in <strong>front-page.php</strong> or the new header style won't display.</h4>
+<ul>
+<li>
+<p>Edit your profile and uncheck &quot;Show Toolbar when viewing site&quot;</p>
+</li>
+<li>
+<p>Wrap <code>div.container</code> tag in <strong>front-page.php</strong> with <code>section.page-wrap</code> tag:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">page</span>-<span class="hljs-title">wrap</span>"&gt;
+  &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">container</span>"&gt;
+
+    &lt;<span class="hljs-title">h1</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h1</span>&gt;
+
+    &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">content</span>'); ?&gt;
+
+  &lt;/<span class="hljs-title">div</span>&gt;
+&lt;/<span class="hljs-title">section</span>&gt;
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<p>STOPPED @ 4:21</p>
+<hr>
+<ul>
+<li><strong>NEXT WE ARE CREATING THE NAV MENU</strong></li>
+</ul>
+<h4 id="gotcha-we-have-to-tell-wordpress-to-enable-menu-functionality----it-is-not-enabled-by-default">#GOTCHA: We have to tell WordPress to enable menu functionality -- it is not enabled by default.</h4>
+<ul>
+<li>In <strong>funtions.php</strong> create a &quot;Theme Options&quot; section and enable menus with the <strong>add_theme_support()</strong> function:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-comment">// Theme Options</span>
+add_theme_support(<span class="hljs-string">'menus'</span>);
+</div></code></pre>
+<ul>
+<li>
+<p>Add &quot;Load Stylesheets&quot; and &quot;Load JavaScripts&quot; comments to appropriate sections in functions.php.</p>
+</li>
+<li>
+<p>Now, menus are enabled</p>
+</li>
+</ul>
+<h4 id="550---creating-our-first-menu">@@ 5:50 - Creating our first menu</h4>
+<ul>
+<li>Appearance &gt; Menus &gt; create menu &quot;Top Bar&quot;</li>
+<li>Add all 3 pages (Home, About Us, Contact Us) to Top Bar</li>
+</ul>
+<h4 id="tip-create-%22menu-locations%22-to-hook-into-with-registernavmenus-in-functionsphp">#TIP: Create &quot;menu locations&quot; to hook into with register_nav_menus() in functions.php.</h4>
+<pre class="hljs"><code><div><span class="hljs-comment">// Menus</span>
+register_nav_menus(
+
+  <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'top-menu'</span> =&gt; <span class="hljs-string">'Top Menu Location'</span>,
+    <span class="hljs-string">'mobile-menu'</span> =&gt; <span class="hljs-string">'Mobile Menu Location'</span>,
+  )
+
+);
+</div></code></pre>
+<ul>
+<li>In the arguments array the stub / handle is on the left and the display name on the right</li>
+<li>Now, you should see the display names listed on the <strong>Appearance &gt; Menus page under &quot;Display Location&quot;</strong></li>
+<li>Add Top Menu to header using the <strong>wp_nav_menu()</strong> hook in functions.php:</li>
+</ul>
+<pre class="hljs"><code><div>&lt;header&gt;
+
+  <span class="hljs-meta">&lt;?php</span>
+  wp_nav_menu(
+    <span class="hljs-keyword">array</span>(
+      <span class="hljs-string">'theme_location'</span> =&gt; <span class="hljs-string">'top-menu'</span>,
+    )
+  );
+  <span class="hljs-meta">?&gt;</span>
+
+&lt;/header&gt;
+</div></code></pre>
+<ul>
+<li>Now, you the menu should display in the black header that we created.</li>
+</ul>
+<h4 id="gotcha-the-header-top-nav-menu-is-currently-unstyled-so-it-shows-as-an-unordered-list-on-the-top-left-we-will-need-to-style-it-next">#GOTCHA:  The header top nav menu is currently unstyled, so it shows as an unordered list on the top left. We will need to style it next.</h4>
+<ul>
+<li>In <strong>header.php</strong> wrap the wp_nav_menu() function in a <code>div.container</code> bootstrap class in order to center the div on the page. Note, the menu will still be aligned left.</li>
+<li></li>
+</ul>
+<hr>
+<h3 id="some-options-for-the-wpnavmenu-args-array">Some options for the wp_nav_menu() args array:</h3>
+<ul>
+<li><strong>menu</strong>: hard-codes whatever menu, in this case the menu titled &quot;Top Bar&quot;</li>
+</ul>
+<pre class="hljs"><code><div>    wp_nav_menu(
+      <span class="hljs-keyword">array</span>(
+        <span class="hljs-string">'menu'</span> =&gt; <span class="hljs-string">'Top Bar'</span>,
+      )
+    );
+</div></code></pre>
+<ul>
+<li><strong>menu_class</strong>: adds a class to the generated wp_nav_menu(). Add a class called 'top-bar' like this:</li>
+</ul>
+<pre class="hljs"><code><div>wp_nav_menu(
+  <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'theme_location'</span> =&gt; <span class="hljs-string">'top-menu'</span>,
+    <span class="hljs-string">'menu_class'</span> =&gt; <span class="hljs-string">'top-bar'</span>,
+  )
+);
+
+</div></code></pre>
+<ul>
+<li>
+<p>Verify by inspected the source code and look for <code>class=&quot;top-bar&quot;</code></p>
+</li>
+<li>
+<p>Top begin styling, just create a <code>header .top-bar</code> class in main.css like this:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">display</span>: flex; <span class="hljs-comment">/* make menu horizontal */</span>
+}
+</div></code></pre>
+<h4 id="1300---now-you-should-have-a-horizontal-menu-with-no-whitespace">@@ 13:00 - Now you should have a <strong>horizontal menu</strong> with no whitespace</h4>
+<ul>
+<li>We are going to work in <strong>main.css</strong> now</li>
+<li>Add spacing to all menu item links:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span> <span class="hljs-number">1rem</span>;
+}
+</div></code></pre>
+<ul>
+<li>Remove left padding from first item:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:first-child</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<ul>
+<li>Remove right padding from last item:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-child</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<ul>
+<li>Change menu link color:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+}
+</div></code></pre>
+<h4 id="gotcha-the-container-div-needs-to-be-100-height-or-the-menu-wont-center-vertically">#GOTCHA: The .container div needs to be 100% height or the menu won't center vertically.</h4>
+<ul>
+<li>Center menu in header with flexbox:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+}
+</div></code></pre>
+<h4 id="gotcha-in-his-wordpress-version-menus-appear-to-have-no-underline-except-on-hover-by-default-to-match-his-configuration-we-need-to-set-text-decoration-none-but-add-it-on-hover">#GOTCHA: In his WordPress version, menus appear to have no underline except on hover by default. To match his configuration, we need to set text-decoration: none but add it on hover.</h4>
+<ul>
+<li>Make these changes to <strong>main.css</strong>:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+</div></code></pre>
+<h4 id="1608---now-we-should-have-a-working-top-menu-with-%22home%22-%22about-us%22-and-%22contact-us%22">@@ 16:08 - Now we should have a working top menu with &quot;Home&quot;, &quot;About Us&quot;, and &quot;Contact Us&quot;</h4>
+<ul>
+<li>Next, add the <code>section.page-wrap</code> to page.php and template-contactus.php. So, for page.php:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">page</span>-<span class="hljs-title">wrap</span>"&gt;
+&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">container</span>"&gt;
+...
+</span></div></code></pre>
+<h4 id="1630---sub-menus">@@ 16:30 - Sub Menus</h4>
+<ul>
+<li>Create and publish a page called <strong>Our Team</strong></li>
+<li>Add as a submenu item (nested) of &quot;About Us&quot; in Appearance &gt; Menus</li>
+</ul>
+<h4 id="gotcha-when-we-refresh-and-view-the-header-menu-%22our-team%22-is-there-but-not-styled-it-should-pop-out-on-hover-and-be-invisible-otherwise-but-it-is-visible-and-taking-up-space-in-the-menu">#GOTCHA: When we refresh and view the header menu, &quot;Our Team&quot; is there but not styled. It should pop out on hover and be invisible otherwise, but it is visible and taking up space in the menu.</h4>
+<ul>
+<li>Inspecting the code we can see that WordPress gives the nested a menu item a class of <strong>sub-menu</strong> like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sub-menu"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"menu-item-27"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"menu-item menu-item-type-post_type menu-item-object-page menu-item-27"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://hkkbsnap01.local/our-team/"</span>&gt;</span>Our Team<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</div></code></pre>
+<ul>
+<li>So, first we hide the submenu item:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: none;
+}
+</div></code></pre>
+<h4 id="tip-if-a-menu-has-a-submenu-wordpress-injects-a-class-called-%22menu-item-has-children%22">#TIP: If a menu has a submenu, WordPress injects a class called &quot;menu-item-has-children&quot;.</h4>
+<ul>
+<li>To show on hover add <code>display:block</code> like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-class">.menu-item-has-children</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+</div></code></pre>
+<ul>
+<li>Then add these styles:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">10px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.1</span>);
+}
+</div></code></pre>
+<h4 id="gotcha-when-you-hover-on-the-menu-the-submenu-will-now-appear-in-on-the-far-top-left-we-need-to-add-styles-to-tell-it-to-pop-up-relative-to-the-%22about-us%22-menu-item-location-it-is-also-showing-a-weird-sun-icon-instead-of-letters">#GOTCHA: When you hover on the menu, the submenu will now appear in on the far top left. We need to add styles to tell it to pop up RELATIVE TO the &quot;About Us&quot; menu item location. It is also showing a weird sun icon instead of letters.</h4>
+<ul>
+<li>Target the list item itself by adding this code right after the <code>header .container</code> rule:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">position</span>: relative;
+}
+</div></code></pre>
+<h4 id="gotcha-now-the-submenu-comes-up-right-on-top-of-the-parent-menu-item">#GOTCHA: Now the submenu comes up right on top of the parent menu item.</h4>
+<ul>
+<li>Changing top from zero to <strong>100%</strong> will fix this issue:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">100%</span>;
+  ...
+</div></code></pre>
+<ul>
+<li>Turns out that 'sun' thing was a disc style list bullet. Remove bullets by adding this code to bottom of the .sub-menu rule:</li>
+</ul>
+<pre class="hljs"><code><div>  <span class="hljs-selector-tag">margin</span>: 0;
+  <span class="hljs-selector-tag">padding</span>: 0;
+  <span class="hljs-selector-tag">list-style-type</span>: <span class="hljs-selector-tag">none</span>;
+</div></code></pre>
+<ul>
+<li>Then give it a width of 300px and lets target the link itself for the color change:</li>
+</ul>
+<pre class="hljs"><code><div>...
+  <span class="hljs-selector-tag">margin</span>: 0;
+  <span class="hljs-selector-tag">padding</span>: 0;
+  <span class="hljs-selector-tag">list-style-type</span>: <span class="hljs-selector-tag">none</span>;
+  <span class="hljs-selector-tag">width</span>: 300<span class="hljs-selector-tag">px</span>;
+}
+
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</div></code></pre>
+<ul>
+<li>We are getting closer. Now we have the submenu popping up in the right place and the submenu item text is displaying. Just a little more styling needed to make it look good.</li>
+<li>Let's center the text and give it some padding. The submenu link should now look like:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: red;
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+</div></code></pre>
+<h4 id="gotcha-there-is-no-change---why-because-the-link-is-displaying-as-inline-we-need-to-change-display-to-block">#GOTCHA: There is no change - Why? Because the link is displaying as inline. We need to change display to block.</h4>
+<ul>
+<li>Now, remove the link underline and make it so link text turns black on hover:</li>
+</ul>
+<pre class="hljs"><code><div>...
+  <span class="hljs-selector-tag">text-decoration</span>: <span class="hljs-selector-tag">none</span>;
+}
+
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">color</span>: black;
+}
+</div></code></pre>
+<ul>
+<li>Reduce submenu width to 200px and add rounded corners:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> {
+...
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">5rem</span>;
+}
+</div></code></pre>
+<ul>
+<li>Add 4 more dummy submenu items by just adding anything (pages) to see what multiple items will look like.</li>
+</ul>
+<h4 id="gotcha-the-website-content-overlaps-the-dropdown-submenu-you-can-see-this-effect-on-the-contact-page-solve-by-adding-a-z-index-value-of-999-to-the-submenu">#GOTCHA: The website content overlaps the dropdown submenu. You can see this effect on the contact page. Solve by adding a z-index value of 999 to the submenu.</h4>
+<ul>
+<li>Make the top menu structure look like this:</li>
+</ul>
+<pre class="hljs"><code><div>.
+├── Home
+├── About Us/
+│   ├── Our Team
+│   ├── Our Team
+│   ├── Contact Us
+│   └── About Us/
+│       ├── Our Team
+│       ├── Our Team
+│       ├── Contact Us
+│       └── About Us
+├── Home
+└── Home
+</div></code></pre>
+<h4 id="gotcha-nested-2nd-level-submenu-displays-in-same-column-as-1st-level-but-should-be-offset">#GOTCHA: Nested 2nd level submenu displays in same column as 1st level, but should be offset.</h4>
+<ul>
+<li>Target 2nd submenu and offset with <code>left: 100%</code>:</li>
+</ul>
+<pre class="hljs"><code><div>...
+
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-class">.menu-item-has-children</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-comment">/* 2nd level submenu */</span>
+<span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-class">.sub-menu</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">100%</span>;
+}
+</div></code></pre>
+<ul>
+<li>Change where the 2nd level submenu starts with <code>top: 0</code>.</li>
+</ul>
+<h4 id="gotcha-we-should-only-target-submenu-we-want-to-show-when-we-highlight-a-link">#GOTCHA: We should only target submenu we want to show when we highlight a link</h4>
+<ul>
+<li>Make so the display block of submenu only shows when hovering the first level by adding direct child selector greater than sign arrows:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> &gt; <span class="hljs-selector-class">.menu-item-has-children</span><span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+</div></code></pre>
+<h4 id="gotcha-this-nested-submenu-targeting-can-get-tricky-you-may-want-to-start-with-the-following-code-that-works-and-play-around-changing-things-to-see-what-effects-it-will-have">#GOTCHA: This nested submenu targeting can get tricky. You may want to start with the following code that works, and play around changing things to see what effects it will have.</h4>
+<ul>
+<li>Add this under the 1st level submenu hover rule:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">header</span> <span class="hljs-selector-class">.top-bar</span> <span class="hljs-selector-class">.menu-item-has-children</span> <span class="hljs-selector-class">.sub-menu</span> &gt; <span class="hljs-selector-class">.menu-item-has-children</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-class">.sub-menu</span> {
+  <span class="hljs-attribute">display</span>: block;
+}
+</div></code></pre>
+<h4 id="3002---how-to-create-multiple-theme-locations">@@ 30:02 - How to create multiple theme locations</h4>
+<ul>
+<li>Copy the <code>header</code> tag from header.php and paste in footer.php above current code</li>
+<li>In <strong>footer.php</strong> change the header tag to a footer tag</li>
+<li>Set them_location to footer-menu and menu_class to footer-bar like this:</li>
+</ul>
+<pre class="hljs"><code><div>wp_nav_menu(
+  <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'theme_location'</span> =&gt; <span class="hljs-string">'footer-menu'</span>,
+    <span class="hljs-string">'menu_class'</span> =&gt; <span class="hljs-string">'footer-bar'</span>,
+  )
+);
+</div></code></pre>
+<ul>
+<li>In <strong>functions.php</strong> register a new location for footer menu:</li>
+</ul>
+<pre class="hljs"><code><div>register_nav_menus(
+
+  <span class="hljs-keyword">array</span>(
+    <span class="hljs-string">'top-menu'</span> =&gt; <span class="hljs-string">'Top Menu Location'</span>,
+    <span class="hljs-string">'mobile-menu'</span> =&gt; <span class="hljs-string">'Mobile Menu Location'</span>,
+    <span class="hljs-string">'footer-menu'</span> =&gt; <span class="hljs-string">'Footer Menu Location'</span>,
+  )
+
+);
+</div></code></pre>
+<ul>
+<li>Go to Appearance &gt; Menus and refresh and now we should see &quot;Footer Menu Location&quot; listed.</li>
+<li>Enable the &quot;Footer Menu Location&quot; checkbox</li>
+</ul>
+<h4 id="tip-he-doesnt-cover-this-in-detail-but-heres-how-we-make-and-style-the-footer-menu">#TIP: He doesn't cover this in detail, but here's how we make and style the footer menu:</h4>
+<ul>
+<li>
+<p>Add another menu in Appearance &gt; Menus called &quot;Footer Menu&quot; and assign it to the footer menu location</p>
+</li>
+<li>
+<p>All all current pages (Home, About Us, Contact Us, Our Team) to the menu and save</p>
+</li>
+<li>
+<p>Copy a good chunk of the header menu styles and replace &quot;header&quot; with &quot;footer&quot; and &quot;top-bar&quot; with &quot;footer-bar&quot;. The footer styling should look like this:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-tag">footer</span> {
+<span class="hljs-attribute">background</span>: <span class="hljs-number">#111</span>;
+<span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+<span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+}
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> {
+  <span class="hljs-attribute">list-style-type</span>: none;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">display</span>: flex; <span class="hljs-comment">/* make menu horizontal */</span>
+  <span class="hljs-attribute">background</span>: black;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+}
+
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">position</span>: relative;
+}
+
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding</span>: .<span class="hljs-number">25rem</span> <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">text-decoration</span>: none;
+}
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">text-decoration</span>: underline;
+}
+
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:first-child</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-tag">footer</span> <span class="hljs-selector-class">.footer-bar</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-child</span> <span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<ul>
+<li>Now the footer styling matches the header styling on everthing except hover for nested submenus. This is enough to get the point across</li>
+</ul>
+<p><img src="../images/screen-hkkb--01--tutwrk--mr-digital--wp-theme-scratch.jpg" alt="&quot;Our theme at the end of vid 5 of the Mr Digital tutorial&quot;">
+<em>Our theme at the end of vid 5 of the Mr Digital tutorial</em></p>
+<h4 id="tip---clear-local-changes-for-a-single-file-with-git-restore-filename-source-httpswwwgit-towercomlearngitfaqgit-discard-changes">#TIP - Clear local changes for a single file with <code>git restore [filename]</code> (Source: https://www.git-tower.com/learn/git/faq/git-discard-changes)</h4>
+<h3 id="vid-06---blog-archive-posts-pagination-thumbnails">VID: 06 - Blog Archive, Posts, Pagination, Thumbnails</h3>
+<ul>
+<li>WordPress started as a blogging platform and has evolved into a fully-fledged CMS</li>
+<li><strong>single.php:</strong> the core default template for all standard single posts</li>
+</ul>
+<h4 id="gotcha-at-748-his-is-showing-a-page-title-when-the-post-is-clicked-into-by-ours-is-showing-nothing---why-because--0057-he-says-lets-grab-the-content-from-pagephp----but-never-actually-does-it-on-screen-instead-he-switches-gears-and-adds-a-bunch-of-posts-in-admin-dashboard">#GOTCHA: At 7:48 his is showing a page title when the post is clicked into by ours is showing nothing - Why? Because @ 00:57 he says let's grab the content from page.php -- but never actually does it on-screen! Instead, he switches gears and adds a bunch of posts in admin dashboard.</h4>
+<h4 id="tip-copy-contents-of-pagephp-to-singlephp-before-going-further">#TIP: Copy contents of page.php to single.php before going further</h4>
+<ul>
+<li>The <strong>single.php</strong> file should now look like this:</li>
+</ul>
+<pre class="hljs"><code><div>
+</div></code></pre>
+<ul>
+<li>
+<p>Create <strong>Test Post 1</strong> in WP Admin Dashboard</p>
+</li>
+<li>
+<p>Create category <strong>Blog</strong></p>
+</li>
+<li>
+<p>Assign category &quot;Blog&quot; to Test Post 1 and publish</p>
+</li>
+<li>
+<p>Appearance &gt; Menus make <strong>Top Bar</strong> menu as follows:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div>.
+├── Home
+├── About Us
+├── Our Team
+└── Contact Us
+</div></code></pre>
+<ul>
+<li>Add the &quot;Blog&quot; <strong>category</strong> to menu structure after &quot;Our Team&quot; so it looks like this:</li>
+</ul>
+<pre class="hljs"><code><div>.
+├── Home
+├── About Us
+├── Our Team
+├── Blog
+└── Contact Us
+</div></code></pre>
+<ul>
+<li>Now, we should have a link to the Blog category in the top bar menu</li>
+</ul>
+<h4 id="gotcha---clicking-on-the-blog-menu-link-will-just-show-a-blank-page-at-this-point">#GOTCHA - Clicking on the Blog menu link will just show a blank page at this point</h4>
+<ul>
+<li>
+<p>At this point, since Blog is category archive, it uses the default <strong>archive.php</strong> template</p>
+</li>
+<li>
+<p>Let's start building archive.php by pasting in the code from page.php. So, the code we start with should look like this:</p>
+</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">page</span>-<span class="hljs-title">wrap</span>"&gt;
+&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">container</span>"&gt;
+  
+  &lt;<span class="hljs-title">h1</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h1</span>&gt;
+
+  &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">content</span>'); ?&gt;
+
+&lt;/<span class="hljs-title">div</span>&gt;
+&lt;/<span class="hljs-title">section</span>&gt;
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<ul>
+<li>
+<p>Add some lorem (3 paragraphs) to Test Post 1 content editor</p>
+</li>
+<li>
+<p>Create 3 tags <strong>test1, test2, test3</strong></p>
+</li>
+<li>
+<p>INSTALL and activate plugin: Duplicate Post</p>
+</li>
+</ul>
+<h4 id="tip---the-plugin-name-in-2023-is-called-%22yoast-duplicate-post%22">#TIP - The plugin name in 2023 is called &quot;Yoast Duplicate Post&quot;</h4>
+<ul>
+<li>Duplicate the test post 4 times for a total of 5</li>
+</ul>
+<h4 id="tip---delete-the-hello-world-default-post-this-probably-should-have-been-done-at-the-very-beginning-of-the-tutorial">#TIP - DELETE the Hello World! default post. This probably should have been done at the very beginning of the tutorial.</h4>
+<ul>
+<li>Rename the post with sequential numbers so now we have Test Post 1, Test Post 2 ... Test Post 5</li>
+</ul>
+<h4 id="gotcha---on-blog-page-title-is-only-showing-%22test-post-2%22-but-the-content-from-all-the-posts-is-there">#GOTCHA - On Blog page title is only showing &quot;Test Post 2&quot;, but the content from all the posts is there.</h4>
+<ul>
+<li>Create new file <strong>section-archive.php</strong> in includes/</li>
+<li>Copy all code from section-content.php -- this is known as the <strong>loop</strong></li>
+<li>In <strong>archive.php</strong> change the get_template_part() 2nd parameter from &quot;content&quot; to &quot;archive&quot; like this:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_template_part(<span class="hljs-string">'includes/section'</span>, <span class="hljs-string">'archive'</span>); <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<ul>
+<li>Move the <code>H1</code> post title code from archive.php into section-archive.php. These two files should now look like this:</li>
+</ul>
+<p><strong>archive.php</strong></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> get_header();  <span class="hljs-meta">?&gt;</span>
+
+&lt;section <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">page</span>-<span class="hljs-title">wrap</span>"&gt;
+&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">container</span>"&gt;
+  
+  &lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_template_part</span>('<span class="hljs-title">includes</span>/<span class="hljs-title">section</span>', '<span class="hljs-title">archive</span>'); ?&gt;
+
+&lt;/<span class="hljs-title">div</span>&gt;
+&lt;/<span class="hljs-title">section</span>&gt;
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">get_footer</span>();  ?&gt;
+</span></div></code></pre>
+<p><strong>section-archive.php</strong></p>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>( have_posts() ): <span class="hljs-keyword">while</span>( have_posts() ): the_post(); <span class="hljs-meta">?&gt;</span>
+
+  &lt;h1&gt;<span class="hljs-meta">&lt;?php</span> the_title(); <span class="hljs-meta">?&gt;</span>&lt;/h1&gt;
+
+  <span class="hljs-meta">&lt;?php</span> the_content(); <span class="hljs-meta">?&gt;</span>
+
+<span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endwhile</span>; <span class="hljs-keyword">else</span>: <span class="hljs-keyword">endif</span>; <span class="hljs-meta">?&gt;</span>
+</div></code></pre>
+<h4 id="tip---the-code-immediately-above-this-tip-is-a-basic-wp-posts-%22loop%22">#TIP - The code immediately above this tip is a basic WP posts &quot;loop&quot;</h4>
+<h4 id="gotcha---the-whole-blog-post-is-showing-in-the-post-list-but-we-need-the-excerpt-to-show-instead">#GOTCHA - The whole blog post is showing in the post list, but we need the excerpt to show instead</h4>
+<ul>
+<li>Replace the_content() in <strong>section-archive.php</strong> with <code>the_content()</code></li>
+<li>Add a &quot;read more&quot; link with <code>the_permalink()</code></li>
+<li>Style as row cards with Bootstrap classes</li>
+<li>Style link as button with bootstrap. Final result code for section-archive.php:</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span> (have_posts()) : <span class="hljs-keyword">while</span> (have_posts()) : the_post(); <span class="hljs-meta">?&gt;</span>
+
+    &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>="<span class="hljs-title">card</span> <span class="hljs-title">mb</span>-3"&gt;
+
+      &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>="<span class="hljs-title">card</span>-<span class="hljs-title">body</span>"&gt;
+
+        &lt;<span class="hljs-title">h3</span>&gt;&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_title</span>(); ?&gt;&lt;/<span class="hljs-title">h3</span>&gt;
+        &lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_excerpt</span>(); ?&gt;
+
+        &lt;<span class="hljs-title">a</span> <span class="hljs-title">href</span>="&lt;?<span class="hljs-title">php</span> <span class="hljs-title">the_permalink</span>(); ?&gt;"&gt;<span class="hljs-title">Read</span> <span class="hljs-title">more</span>&lt;/<span class="hljs-title">a</span>&gt;
+
+      &lt;/<span class="hljs-title">div</span>&gt;
+
+    &lt;/<span class="hljs-title">div</span>&gt;
+
+&lt;?<span class="hljs-title">php</span> <span class="hljs-title">endwhile</span>; <span class="hljs-title">else</span> : <span class="hljs-title">endif</span>; ?&gt;
+</span></div></code></pre>
+<p><img src="../images/screen-hkkb--05--tutwrk--mr-digital--wp-theme-scratch.jpg" alt="Blog list layout with Bootstrap styling"></p>
+<p><em>Blog list layout with Bootstrap styling</em></p>
+<ul>
+<li>When we click the top &quot;Read more&quot; link we should see the post title and content</li>
+</ul>
+<p><img src="../images/screen-hkkb--06--tutwrk--mr-digital--wp-theme-scratch.jpg" alt="Single blog post layout for Test Post 2">
+<em>Single blog post layout for Test Post 2</em></p>
+<h4 id="854---pagination">@@ 8:54 - Pagination</h4>
+<ul>
+<li>
+<p>We can use WP built-in pagination functionality</p>
+</li>
+<li>
+<p>2 ways to paginate:</p>
+<ul>
+<li>Show before, prev, and next link</li>
+<li>Show a bunch of number to take you to that specific page</li>
+</ul>
+</li>
+<li>
+<p>In the archive it needs to be outside of the loop (in <strong>archive.php</strong>)</p>
+</li>
+</ul>
+<h4 id="gotcha-tried-styling-the-notesmainmd-background-white-and-color-black-then-realized-it-wasnt-that-simple-reinstalled-vscode-extension-markdown-preview-github-styling-will-just-need-to-enabledisable-the-plugin-as-needed">#GOTCHA: Tried styling the notes/main.md background white and color black then realized it wasn't that simple. Reinstalled VSCode Extension: Markdown Preview Github Styling. Will just need to enable/disable the plugin as needed.</h4>
+<h2 id="bookmark">BOOKMARK</h2>
+<hr>
+
+</body>
+</html>

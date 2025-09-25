@@ -1,10 +1,5 @@
 <!-- 🔗 Root Stylesheets -->
 <link rel="stylesheet" href="../_css/main.css">
-<link rel="stylesheet" href="../_css/notes.css">
-
-<!-- 🔗 Personal Notes Stylesheets -->
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/notes.css">
 
 <!-- 🖼️ Site Logo -->
 ![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
@@ -46,7 +41,7 @@
 
 ---
 
-**functions.php:**
+<span class="code-filename">functions.php:</span>
 
 - Create template file: **header.php**
 - Create template file: **footer.php**
