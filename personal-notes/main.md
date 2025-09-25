@@ -46,7 +46,7 @@
 
 ---
 
-**functions.php:**
+<span class="code-filename">functions.php:</span>
 
 - Create template file: **header.php**
 - Create template file: **footer.php**

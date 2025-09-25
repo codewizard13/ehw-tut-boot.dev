@@ -1,21 +1,16 @@
 # Project:        MASTER GITIGNORE FILE
 #
 # This Filename:  .gitignore
-# Date Created:   06/08/24
-# Date Updated:   --
+# Date Created:   01/20/23
+# Date Updated:   02/05/2025
 # Programmer:     Eric L. Hepperle
 # 
-# File Version:    1.00.00
+# File Version:    1.02.00
 # 
 # File Purpose:
-#  This is the master .gitignore file I created for my own use. You are free
-#  to copy and use this file at your own risk. This version tracks a wordpress
-#  website, but only the site plugin, child theme, and a few specific files.
+#   This is the master .gitignore file I created for my own use. You are free to copy and use this file at your own risk.
 #
 # Usage: Rename to .gitignore then use as normal.
-#
-# Resources:
-# - https://chatgpt.com/c/529a0503-3c76-429b-aced-478494130451
 #
 #######################################################
 
@@ -124,6 +119,7 @@ token.json
 
 # Sandboxes & Junk Files
 sb/
+_sb/
 sandbox/
 playground/
 junk/
@@ -138,36 +134,13 @@ junk/
 
 
 
-# Additional common ignores
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE/editor config files
-.idea/
-.vscode/
-*.code-workspace
-
-# Log files
-*.log
-*.tmp
-
-# Node modules and dependencies
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# Unignore files starting with specific names
-!*.gitignore*
-!*.htacces*
-!license*
-!Version*
-!wp-content/*debug.log*
-
-
-
 ### ------------------------------------------------ ####
 #  This file is always evolving. Refer to the link at
 #  https://github.com/codewizard13/ehw-lib
 #  for the latest.
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
