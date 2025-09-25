@@ -144,11 +144,26 @@ h3[id^="vid"] {
 }
 
 #bookmark {
-  background: orange;
+  background: lightcyan;
   display: inline-block;
   padding: 1rem;
-  border: solid green 4px;
-  transform: skew(20deg);
+  border: solid cadetblue 4px;
+  border-radius: .8rem;
+  /* transform: skew(20deg); */
+}
+
+
+/* Bookmark banner */
+#bookmark::before {
+  content: "🔖";
+  /* font-family: FontAwesome; */
+  /* content: "\f15c"; */
+  padding: 0.3rem 0.6rem;
+  /* background: black; */
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  margin-right: 0.8rem;
 }
 
 h6 {
@@ -182,7 +197,7 @@ h4[id*="---"] {
   padding: 1rem;
 }
 
-/* Code filename label with FontAwesome icon */
+/* Code filename label */
 .code-filename {
   background: beige;
   min-height: 1rem;
@@ -198,15 +213,18 @@ h4[id*="---"] {
   margin-top: 2rem;
 }
 .code-filename::before {
-  font-family: FontAwesome;
-  content: "\f15c";
+  content: "📄";
+  /* font-family: FontAwesome; */
+  /* content: "\f15c"; */
   padding: 0.3rem 0.6rem;
-  background: black;
+  background: slategray;
   color: white;
   margin: 0;
   padding: 0.5rem 0.7rem;
   margin-right: 0.8rem;
 }
+
+
 
 
 /* ===========================================================================

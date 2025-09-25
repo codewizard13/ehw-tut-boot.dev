@@ -1,0 +1,19 @@
+## PURPOSE
+
+Chapter or Section / Division / Video number go in this folder as subfolders.
+
+Ex:
+
+.. [courses/]
+01_Python/
+  index.md
+	01.00__Intro.md
+	01.02_GettingStarted.md
+	01.03_DataStructures.md
+		01.03.01 - Strings.md
+		01.03.02 - Arrays.md
+		etc ...
+	01.04_Loops/
+	... etc.
+
+---
