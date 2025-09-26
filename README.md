@@ -18,7 +18,7 @@
 | Platform             | [Boot.dev](https://www.boot.dev/) |
 | File Name            | README.md                         |
 | Date Created         | 2025‑09‑15                        |
-| Date Modified        | 2025-09-25                        |
+| Date Modified        | 2025-09-26                        |
 | Version              | 00.01.00                          |
 | Programmer / Student | **Eric L. Hepperle**              |
 
@@ -54,7 +54,7 @@
 
 ## NOTES ✍️
 
-Notes are located in [personal-notes/](/personal-notes/main.md)
+Notes are located in [courses/](/courses/)
 
 ---
 
@@ -121,19 +121,22 @@ Notes are located in [personal-notes/](/personal-notes/main.md)
 
 ## Repository Structure 📂
 
+> **Pro Tip:** Use `tree [path]` in CMD if on Windows to generate the repo tree structure.
+
 ```text
-├── Week‑01/                  # (if relevant, e.g. for specific learning path steps)
-│   ├── notes.md              
-│   ├── exercises/            
-│   └── projects/             
-├── resources/                
-├── .vscode/
-├── ehw-notes/
-│   ├── css/
-│   ├── docs/
-│   └── img/
-├── ex-files/
-└── _sb/
+├───courses
+│   └───01_Python
+├───_css
+├───_pix
+│   ├───logos
+│   └───screens
+├───_ref
+│   ├───demos
+│   │   └───style-ref-v1
+│   └───shape_lib
+├───_sb
+├───_tmpl
+└───_tools
 ````
 
 ---
