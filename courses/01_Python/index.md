@@ -6,23 +6,23 @@
 
 
 <!-- 📝 Title -->
-# 📒 COURSE NOTES: <span class="course-title">[Learn Python](https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9)</span>
+# 📒 COURSE NOTES: <span class="course-title">[Learn to Code in Python](https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9)</span>
 
 
 
 <!-- 🧭 Navigation -->
-### [🏚️ Home](../README.md) | [📁 How-To](index.md) | [🔖 Bookmark](#bookmark)
+### [🏚️ README](../../README.md) | [📁 Courses List](index.md) | [🔖 Bookmark](#bookmark)
 
 <!-- 👤 Metadata -->
-| File Name            | **index.md**                                                 |
-| -------------------- | --------------------------------------------------------- |
-| **Date Created**         | 09/25/25                                                  |
-| **Date Modified**        | --                                                        |
-| **Platform**             | Website                                                   |
+| File Name                | **index.md**                             |
+| ------------------------ | ---------------------------------------- |
+| **Date Created**         | 09/25/25                                 |
+| **Date Modified**        | 09/26/25                                 |
+| **Platform**             | Website                                  |
 | **Channel**              | [Boot.dev](https://www.boot.dev/lessons) |
-| **Version**              | 0.01.00                                                     |
-| **Programmer / Student** | **Eric L. Hepperle**                                         |
-| **AI Assistance**: | ChatGPT, Perplexity |
+| **Version**              | 0.01.00                                  |
+| **Programmer / Student** | **Eric L. Hepperle**                     |
+| **AI Assistance**:       | ChatGPT, Perplexity                      |
 
 * **Course URL:** https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9
 
@@ -65,22 +65,22 @@ Here you will find links to all the other documents in this folder.
 
 ## CHAPTERS 📖
 
-| CH. Num | Timestamp/Video | Chapter Name/Title            |
-| ------- | --------- | ----------------------------- |
-| 01      | --        | [Introduction](#ch1)          |
-| 02      | --        | [Variables](#ch2)             |
-| 03      | --        | [Functions](#ch3)             |
-| 04      | --        | [Scope](#ch4)                 |
-| 05      | --        | [Testing and Debugging](#ch5) |
-| 06      | --        | [Computing](#ch6)             |
-| 07      | --        | [Comparisons](#ch7)           |
-| 08      | --        | [Loops](#ch8)                 |
-| 09      | --        | [Lists](#ch9)                 |
-| 10      | --        | [Dictionaries](#ch10)         |
-| 11      | --        | [Sets](#ch11)                 |
-| 12      | --        | [Errors](#ch12)               |
-| 13      | --        | [Practice](#ch13)             |
-| 14      | --        | [Quiz](#ch14)                 |
+| CH. Num | Timestamp/Video | Chapter Name/Title                                  |
+| ------- | --------------- | --------------------------------------------------- |
+| 01      | --              | [Introduction](/courses/01_Python/01.01__Intro.md)  |
+| 02      | --              | [Variables](/courses/01_Python/01.02__Variables.md) |
+| 03      | --              | [Functions]                                         |
+| 04      | --              | [Scope]                                             |
+| 05      | --              | [Testing and Debugging]                             |
+| 06      | --              | [Computing]                                         |
+| 07      | --              | [Comparisons]                                       |
+| 08      | --              | [Loops]                                             |
+| 09      | --              | [Lists]                                             |
+| 10      | --              | [Dictionaries]                                      |
+| 11      | --              | [Sets]                                              |
+| 12      | --              | [Errors]                                            |
+| 13      | --              | [Practice]                                          |
+| 14      | --              | [Quiz]                                              |
 
 
 ---

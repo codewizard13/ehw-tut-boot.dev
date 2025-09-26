@@ -68,3 +68,25 @@ docs(README): update notes link, repo tree structure, and align chapter filename
 ### ⚠️ Notes and Caveats  
 - Filename index aligned to course chapters to avoid confusion  
 - Ensure further filenames follow this indexing format  
+
+
+
+---
+
+
+
+doc(courses/01_Python): add ch2 Variables notes starter and refactor earlier files ([#X](https://github.com/codewizard13/ehw-tut-boot.dev/issues/X))
+
+### 🎓 Course: [Boot.dev] - Learn to Code in Python
+
+- **courses/01_Python/index.md/** updated chapters to remove links for incomplete chapters; improved top nav alignment  
+- **courses/01_Python/01.01__Intro.md/** updated title and nav; changed chapter label to 'Intro'; removed unnecessary bookmark  
+- **courses/01_Python/01.02__Variables.md/** cloned from Intro as starter; revised lesson headings with ▶️ emoji; new chapter starter template created  
+- Universally replaced course name "Learn Python" with full "Learn to Code in Python"  
+
+### ⚠️ Notes and Caveats  
+- Variables chapter starter added for next phase  
+- Navigation and chapter labeling aligned closer to course structure  
+
+### 🔗 Related Tickets  
+- [#X](https://github.com/codewizard13/ehw-tut-boot.dev/issues/X) - Track chapter 2 notes and refactor progress  
