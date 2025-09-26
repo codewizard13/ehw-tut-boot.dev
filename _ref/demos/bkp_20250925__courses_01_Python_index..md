@@ -1,5 +1,5 @@
 <!-- 🔗 Custom Stylesheet -->
-<link rel="stylesheet" href="../_css/main.css">
+<link rel="stylesheet" href="../../_css/main.css">
 
 <!-- 🖼️ Site Logo -->
 ![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
@@ -14,7 +14,7 @@
 ### [🏚️ Home](../README.md) | [📁 How-To](index.md) | [🔖 Bookmark](#bookmark)
 
 <!-- 👤 Metadata -->
-| File Name            | **personal-notes/index.md**                                                 |
+| File Name            | **index.md**                                                 |
 | -------------------- | --------------------------------------------------------- |
 | **Date Created**         | 09/25/25                                                  |
 | **Date Modified**        | --                                                        |
@@ -62,6 +62,26 @@ Here you will find links to all the other documents in this folder.
 - [HTML Named Hex Color Shades](/coding/html-hex-colors.md)
 
 ---
+
+## CHAPTERS 📖
+
+| CH. Num | Timestamp/Video | Chapter Name/Title            |
+| ------- | --------- | ----------------------------- |
+| 01      | --        | [Introduction](#ch1)          |
+| 02      | --        | [Variables](#ch2)             |
+| 03      | --        | [Functions](#ch3)             |
+| 04      | --        | [Scope](#ch4)                 |
+| 05      | --        | [Testing and Debugging](#ch5) |
+| 06      | --        | [Computing](#ch6)             |
+| 07      | --        | [Comparisons](#ch7)           |
+| 08      | --        | [Loops](#ch8)                 |
+| 09      | --        | [Lists](#ch9)                 |
+| 10      | --        | [Dictionaries](#ch10)         |
+| 11      | --        | [Sets](#ch11)                 |
+| 12      | --        | [Errors](#ch12)               |
+| 13      | --        | [Practice](#ch13)             |
+| 14      | --        | [Quiz](#ch14)                 |
+
 
 ---
 
