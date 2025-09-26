@@ -221,13 +221,14 @@ These notes and overview are personal work based on the Boot.dev platform.
 
 ## CHAPTERS 📖
 
-| CH. Num | Timestamp | Chapter Name/Title              |
-| ------- | --------- | ------------------------------- |
-| 00      | 00:00     | Introduction / What is Boot.dev |
-| 01      | --        | Mission & Learning Paths        |
-| 02      | --        | Meet “Boots” AI Mentor          |
-| 03      | --        | Progress & Statistics           |
-| 04      | --        | Getting Started                 |
+| CH. Num | Level | Chapter Name/Title                                                                           |
+| ------- | ----- | -------------------------------------------------------------------------------------------- |
+| 00      | --    | Introduction / What is Boot.dev                                                              |
+| 00      | 01    | [Welcome to Learn Python](https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9) |
+| 01      | --    | Mission & Learning Paths                                                                     |
+| 02      | --    | Meet “Boots” AI Mentor                                                                       |
+| 03      | --    | Progress & Statistics                                                                        |
+| 04      | --    | Getting Started                                                                              |
 
 ---
 
