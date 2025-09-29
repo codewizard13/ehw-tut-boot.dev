@@ -21,6 +21,16 @@
  */
 
 /* ===========================================================================
+ * 00. Color and Style Variables
+ * 
+ * Contains ....
+ * ===========================================================================
+ */
+:root {
+  --clr-lt-lavender: #f0edff;
+}
+
+/* ===========================================================================
  * 01. Base Layout and Page Wrappers
  * 
  * Contains core body constraints and general page wrapper padding.
@@ -34,7 +44,6 @@ body {
 .page-wrap {
   padding: 2rem 0;
 }
-
 
 /* ===========================================================================
  * 02. Documentation and Notes Styling
@@ -58,7 +67,7 @@ h1[id*="index-for"] {
   color: cadetblue;
 }
 h1[id*="index-for"]::before {
-  content: '📑';
+  content: "📑";
 }
 
 /* Plugin index headers */
@@ -66,12 +75,12 @@ h1[id*="plugin"] {
   color: red;
 }
 h1[id*="plugin"]::before {
-  content: '🔌';
+  content: "🔌";
 }
 
 /* WordPress logo inserted before WordPress headers */
 h1[id*="wordpress"]::before {
-  content: url('../_pix/logos/wordpress-logo.svg');
+  content: url("../_pix/logos/wordpress-logo.svg");
   transform: scale(0.5) !important;
   display: inline-block;
   flex-direction: row;
@@ -83,7 +92,6 @@ h1[id*="wordpress"]::before {
 h1[id*="course-notes"] {
   color: cadetblue;
 }
-
 
 /* ===========================================================================
  * 03. Tags Display Section
@@ -106,7 +114,7 @@ h1[id*="course-notes"] {
   padding: 0 !important;
 }
 #sec-tags ul li {
-  background: #E6E6FA;
+  background: #e6e6fa;
   padding: 0.1rem 0.66rem;
   margin: 0.4rem;
   border-radius: 0.4rem;
@@ -114,7 +122,6 @@ h1[id*="course-notes"] {
 #sec-tags ul li a {
   color: #000080;
 }
-
 
 /* ===========================================================================
  * 04. Notes-Specific UI Elements
@@ -150,7 +157,7 @@ h3[id^="vid"] {
   display: inline-block;
   padding: 1rem;
   border: solid cadetblue 4px;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   /* transform: skew(20deg); */
 }
 #bookmark::before {
@@ -250,12 +257,6 @@ h4[id*="---"] {
   margin-right: 0.8rem;
 }
 
-
-
-
-
-
-
 /* ===========================================================================
  * 05. Layout and Flexbox Wrappers
  * 
@@ -274,7 +275,6 @@ footer .container {
   align-items: center;
   height: 100%;
 }
-
 
 /* ===========================================================================
  * 06. Header and Navigation Menu Styles
@@ -364,7 +364,6 @@ header .top-bar .sub-menu li .sub-menu {
   top: 0;
 }
 
-
 /* ===========================================================================
  * 07. Footer and Footer Navigation Styles
  * 
@@ -409,8 +408,6 @@ footer .footer-bar li:last-child a {
   padding-right: 0;
 }
 
-
-
 /* ===========================================================================
  * 08. Status Message Styles
  * 
@@ -418,7 +415,7 @@ footer .footer-bar li:last-child a {
  * Designed for inline <span> elements in documentation.
  * ===========================================================================
  */
- .warning-banner {
+.warning-banner {
   background: #fff8e1;
   color: #b26a00;
   border: 2px solid #ff9800;
@@ -476,4 +473,20 @@ footer .footer-bar li:last-child a {
 .error-banner::before {
   content: "⛔";
   margin-right: 0.7rem;
+}
+
+/* ===========================================================================
+ * 09. Features, Sections, and Sidebar Styling
+ * 
+ * Includes styles for ....
+ * ===========================================================================
+ */
+/* Feature section for Boot.dev operation container */
+.boot-dev-op-sec {
+  background: var(--clr-lt-lavender);
+
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.6rem;
+  border: solid gainsboro 0.5px;
 }
