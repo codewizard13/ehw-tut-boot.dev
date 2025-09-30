@@ -484,9 +484,65 @@ footer .footer-bar li:last-child a {
 /* Feature section for Boot.dev operation container */
 .boot-dev-op-sec {
   background: var(--clr-lt-lavender);
-
   padding: 1rem;
   margin: 1rem auto;
   border-radius: 0.6rem;
   border: solid gainsboro 0.5px;
 }
+
+
+
+/* 🔖 Generic callout container */
+.callout {
+  background-color: #ffffe9;         /* Pale ivory background */
+  border: 2px solid #92400e;         /* Warm amber border */
+  border-radius: 11px 11px 11px 0;    /* Top-left corner flat */
+  padding: 1rem;
+  margin: 0;
+  font-family: monospace;            /* Monospace for verbatim text */
+}
+
+/* 📋 Code blocks inside callouts */
+.callout pre {
+  background: #f0f4f8;               /* Subtle blue-gray background */
+  border: 1px solid #cbd5e1;
+  border-left: 4px solid #3b82f6;    /* Blue info cue */
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+
+/* ✂️ Verbatim label */
+.label-verbatim {
+  display: inline-block;
+  background: #fef3c7;               /* Soft yellow */
+  color: #92400e;                    /* Warm amber text */
+  font-weight: 500;
+  padding: 0.3rem 1rem 0.3rem 0;
+  border: 2px solid black;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  margin-top: 2rem;
+  margin-bottom: -2px;
+  min-height: 1rem;
+  position: relative;
+}
+
+/* 🪚 Remove extra spacing if wrapped in <p> */
+p:has(.label-verbatim) {
+  margin: 0 !important;
+}
+
+/* ✂️ Label icon prefix */
+.label-verbatim::before {
+  content: "✂️";
+  background: #191d29;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+}
+
