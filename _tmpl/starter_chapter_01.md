@@ -27,7 +27,6 @@ This chapter is about ...
 
 </section>
 
----
 
 <!-- 🏷️ RELATED TAGS -->
 <section id="sec-tags">
