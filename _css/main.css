@@ -179,26 +179,27 @@ h6 {
   background: #ffffe3;
 }
 
-h4 {
+/* Heading with info */
+.fat-heading {
   padding: 1rem;
   border: solid 2px gray;
   border-radius: 1rem;
 }
 
 /* Gotchas with distinct background */
-h4[id^="gotcha"] {
+.fat-heading[id^="gotcha"] {
   background: mistyrose !important;
   color: brown;
   border-color: brown;
 }
 
 /* Tips with greenish background */
-h4[id^="tip"] {
+.fat-heading[id^="tip"] {
   background: #eafbea !important;
 }
 
 /* Video timestamp highlighting */
-h4[id*="---"] {
+.fat-heading[id*="---"] {
   background: bisque;
   padding: 1rem;
 }
@@ -430,13 +431,14 @@ footer .footer-bar li:last-child a {
   margin-right: 0.7rem;
 }
 
+/* Info Banner */
 .info-banner {
   background: #e3f2fd;
   color: #1769aa;
   border: 2px solid #2196f3;
   border-radius: 0.5rem;
   padding: 0.4rem 1.2rem;
-  font-weight: 600;
+  /* font-weight: 600; */
   display: inline-block;
   margin: 0.5rem 0;
 }
@@ -444,7 +446,14 @@ footer .footer-bar li:last-child a {
   content: "ℹ️";
   margin-right: 0.7rem;
 }
+.info-banner h3,
+.info-banner h4,
+.info-banner h5,
+.info-banner h6 {
+  filter: brightness(86%);
+}
 
+/* Success Banner */
 .success-banner {
   background: #eafbea;
   color: #20782b;
@@ -460,6 +469,7 @@ footer .footer-bar li:last-child a {
   margin-right: 0.7rem;
 }
 
+/* Error Banner */
 .error-banner {
   background: #fde8e8;
   color: #b71c1c;
@@ -474,6 +484,16 @@ footer .footer-bar li:last-child a {
   content: "⛔";
   margin-right: 0.7rem;
 }
+.error-banner pre {
+  background: transparent;
+  margin: 0;
+  padding-bottom: 0.6rem 0;
+  border: none;
+}
+.error-banner pre code > div {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 /* ===========================================================================
  * 09. Features, Sections, and Sidebar Styling
@@ -481,54 +501,52 @@ footer .footer-bar li:last-child a {
  * Includes styles for ....
  * ===========================================================================
  */
+
+/* @CONSIDER: Group labels with their associated sections?  */
+
 /* Feature section for Boot.dev operation container */
 .boot-dev-op-sec {
   background: var(--clr-lt-lavender);
   padding: 1rem;
   margin: 1rem auto;
   border-radius: 0.6rem;
-  border: solid gainsboro 0.5px;
+  /* border: solid gainsboro 0.5px; */
+  border: solid mediumpurple 2px;
 }
-
-
 
 /* 🔖 Generic callout container */
 .callout {
-  background-color: #ffffe9;         /* Pale ivory background */
-  border: 2px solid #92400e;         /* Warm amber border */
-  border-radius: 11px 11px 11px 0;    /* Top-left corner flat */
+  background-color: #ffffe9; /* Pale ivory background */
+  border: 2px solid #92400e; /* Warm amber border */
+  /*border-radius: 11px 11px 11px 0; /* Top-left corner flat */
+  border-radius: 8px;
   padding: 1rem;
   margin: 0;
-  font-family: monospace;            /* Monospace for verbatim text */
+  font-family: monospace; /* Monospace for verbatim text */
+  margin-top: 2.5rem; /* Offsett to accomodate for the label overlap */
 }
 
 /* 📋 Code blocks inside callouts */
 .callout pre {
-  background: #f0f4f8;               /* Subtle blue-gray background */
+  background: #f0f4f8; /* Subtle blue-gray background */
   border: 1px solid #cbd5e1;
-  border-left: 4px solid #3b82f6;    /* Blue info cue */
+  border-left: 4px solid #3b82f6; /* Blue info cue */
   border-radius: 6px;
   padding: 1rem;
   margin: 1rem 0;
 }
 
-
 /* ✂️ Verbatim label */
 .label-verbatim {
+  background: #fef3c7; /* Soft yellow */
+  border: solid 2px brown;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
   display: inline-block;
-  background: #fef3c7;               /* Soft yellow */
-  color: #92400e;                    /* Warm amber text */
-  font-weight: 500;
-  padding: 0.3rem 1rem 0.3rem 0;
-  border: 2px solid black;
-  border-left: none;
-  border-bottom: none;
-  border-radius: 5px;
-  border-bottom-right-radius: 0;
-  margin-top: 2rem;
-  margin-bottom: -2px;
-  min-height: 1rem;
   position: relative;
+  top: -2.5rem;
+  padding-right: .4rem;
 }
 
 /* 🪚 Remove extra spacing if wrapped in <p> */
@@ -541,8 +559,8 @@ p:has(.label-verbatim) {
   content: "✂️";
   background: #191d29;
   color: white;
-  padding: 0.5rem 0.7rem;
+  padding: 0.2rem 0.5rem;
   margin-right: 0.8rem;
   display: inline-block;
+  border-top-left-radius: 0.4rem;
 }
-

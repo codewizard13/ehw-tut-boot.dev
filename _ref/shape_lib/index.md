@@ -52,11 +52,18 @@ All objects assume CSS classes are defined in `main.css` and/or section-specific
     - [Boot.dev Meta Instruction Label](#bootdev-meta-instruction-label)
     - [Bookmark Anchor](#bookmark-anchor)
     - [Code Filename Label](#code-filename-label)
+    - [Lesson Heading Title](#lesson-heading-title)
+    - [▶️ L6: Where to Declare Functions](#️-l6-where-to-declare-functions)
   - [Status Messages 📢](#status-messages-)
     - [Warning Banner ⚠️](#warning-banner-️)
     - [Info Banner ℹ️](#info-banner-ℹ️)
     - [Success Banner ✅](#success-banner-)
     - [Error Banner ⛔](#error-banner-)
+  - [Banners with Matched Sections](#banners-with-matched-sections)
+    - [Info Section with Internal Heading](#info-section-with-internal-heading)
+    - [Boot.dev Meta Instruction Label + Section](#bootdev-meta-instruction-label--section)
+    - [Error Section](#error-section)
+    - [Verbatim Copy Section](#verbatim-copy-section)
   - [✅ Revision History](#-revision-history)
   
 </details>
@@ -102,6 +109,15 @@ Use these to clarify workflow steps, provide quick jump points in documentation,
 ```
 <span class="code-filename">example.py</span>
 ```
+
+### Lesson Heading Title
+
+### ▶️ L6: Where to Declare Functions
+
+```md
+### ▶️ L6: Where to Declare Functions
+```
+
 
 ---
 
@@ -158,10 +174,132 @@ Use these tags at the top of steps, inside callouts, or at key transitions to cl
 
 ---
 
+## Banners with Matched Sections
+
+
+### Info Section with Internal Heading
+
+<section class="info-banner"><span style="font-weight:700">💡 Printing to Debug Your Code </span>
+
+Printing values and running your code is a great way to debug your code. You can see what values are stored in various variables, find your mistakes, and fix them. Add print statements and run your code as you go! It's a great habit to get into to make sure that each line you write is doing what you expect it to do.
+
+</section>
+
+```
+<section class="info-banner"><span style="font-weight:700">💡 [Title_in_Title_Case] </span>
+
+// Content Here
+
+</section>
+```
+
+<section class="info-banner"><span style="font-weight:700; margin-right:1rem">💡 PRO TIP: </span>
+In Python, functions must be defined before they are called
+</section>
+
+```
+<section class="info-banner"><span style="font-weight:700; margin-right:1rem">💡 PRO TIP: </span>
+
+// Content Here
+
+</section>
+```
+
+
+### Boot.dev Meta Instruction Label + Section
+
+<span class="boot-dev-op">Boot.dev Instructions:</span>
+
+<section class="boot-dev-op-sec">
+
+In the real world it's rare to leave `print()` statements in your code when you're done debugging. Similarly, you need to remember to remove any `print()` statements from your code before submitting your work here on Boot.dev because it will interfere with the tests!
+
+
+</section>
+
+```
+<span class="boot-dev-op">Boot.dev Instructions:</span>
+
+<section class="boot-dev-op-sec">
+
+// Content Here
+
+</section>
+```
+
+### Error Section
+
+<section class="error-banner">Error:
+
+```sh
+PythonError: Traceback (most recent call last):
+  File "<exec>", line 16, in <module>
+  File "<string>", line 1, in <module>
+NameError: name 'main' is not defined
+```
+
+</section>
+
+````
+<section class="error-banner">Error:
+
+```sh
+// Error Code Here
+```
+
+</section>
+````
+
+### Verbatim Copy Section
+
+<section class="callout"><span class="label-verbatim">Copied verbatim from the course 👇🏽</span>
+
+Let's break down this function line by line so you can understand every nook and cranny of it.
+
+```py
+def area_of_circle(r):
+    pi = 3.14
+    result = pi * r * r
+    return result
+
+radius = 5
+area = area_of_circle(radius)
+print(area)
+# 78.5
+```
+
+Here's a chronological explanation of what happens when the above code is executed:
+
+1. `def area_of_circle(r)`
+
+The `area_of_circle` function is defined for later use, but not called. It accepts a single input, the arbitrarily named `r`. The body of the function (`pi = 3.14.`.. etc) is ignored for now.
+
+2. `radius = 5`
+A new variable called `radius` is created and set to the value `5`.
+
+... etc.
+
+</section>
+
+<br>
+
+```
+<section class="callout"><span class="label-verbatim">Copied verbatim from the course 👇🏽</span>
+
+// Content Here
+
+... etc.
+
+</section>
+```
+
+---
+
 ## ✅ Revision History
 
-| Version | Date       | Author           | Changes Made           |
-| ------- | ---------- | ---------------- | ---------------------- |
-| 1.00    | 2025-09-26 | Eric L. Hepperle | Initial draft created. |
+| Version | Date       | Author           | Changes Made                                                                            |
+| ------- | ---------- | ---------------- | --------------------------------------------------------------------------------------- |
+| 1.00    | 2025-09-26 | Eric L. Hepperle | Initial draft created.                                                                  |
+| 1.02    | 2025-10-01 | Eric L. Hepperle | Add example sections (info, Boot.dev operation, error, verbatim copy) and lesson title. |
 
 ---
