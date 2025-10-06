@@ -40,6 +40,21 @@ This chapter is about ...
 ---
 
 
+<!-- 📖 TOC (Table of Content) -->
+<details open>
+
+<summary>Table of Contents</summary>
+
+- [📒 COURSE NOTES: Course\_Name\_Title\_Case](#-course-notes-course_name_title_case)
+  - [📂 Chapter \[NN\]: **\[Chapter\_Title\_Case\]**](#-chapter-nn-chapter_title_case)
+    - [🏚️ README | 📁 Index | 🔖 Bookmark](#️-readme---index---bookmark)
+  - [🏷️ Tags:](#️-tags)
+    - [▶️ L1: \[Lesson\_Title\_Case\]](#️-l1-lesson_title_case)
+  - [References](#references)
+  - [Bookmark](#bookmark)
+
+
+</details>
 <!-- Lesson Notes -->
 
 
