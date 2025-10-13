@@ -16,6 +16,9 @@
 <!-- 🧭 Navigation -->
 ### [🏚️ README](../../README.md) | [📁 Index](index.md) | [🔖 Bookmark](#bookmark)
 
+## Bookmark
+
+
 <br>
 
 **In this Chapter:**
@@ -48,10 +51,10 @@ This chapter is about ...
 - [📒 COURSE NOTES: Course\_Name\_Title\_Case](#-course-notes-course_name_title_case)
   - [📂 Chapter \[NN\]: **\[Chapter\_Title\_Case\]**](#-chapter-nn-chapter_title_case)
     - [🏚️ README | 📁 Index | 🔖 Bookmark](#️-readme---index---bookmark)
+  - [Bookmark](#bookmark)
   - [🏷️ Tags:](#️-tags)
     - [▶️ L1: \[Lesson\_Title\_Case\]](#️-l1-lesson_title_case)
   - [References](#references)
-  - [Bookmark](#bookmark)
 
 
 </details>
@@ -70,4 +73,3 @@ This chapter is about ...
 
 - N/A
 
-## Bookmark
