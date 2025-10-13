@@ -16,6 +16,9 @@
 <!-- 🧭 Navigation -->
 ### [🏚️ README](../../README.md) | [📁 Index](index.md) | [🔖 Bookmark](#bookmark)
 
+<span class="warning-banner">IN-PROGRESS</span>
+
+
 ## Bookmark
 
 
@@ -26,7 +29,7 @@
 
 <section class="ehw-doc-descr">
 
-This chapter is about ...
+// PLACEHOLDER This chapter is about ...
 
 </section>
 
