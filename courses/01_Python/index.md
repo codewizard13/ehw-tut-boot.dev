@@ -72,7 +72,7 @@ Here you will find links to all the other documents in this folder.
 | 03      | --              | [Functions](01.03__Functions.md)              |
 | 04      | --              | [Scope](01.04__Scope.md)                      |
 | 05      | --              | [Testing and Debugging](01.05__Test-Debug.md) |
-| 06      | --              | [Computing]                                   |
+| 06      | --              | [Computing](01.06__Computing.md)              |
 | 07      | --              | [Comparisons]                                 |
 | 08      | --              | [Loops]                                       |
 | 09      | --              | [Lists]                                       |
