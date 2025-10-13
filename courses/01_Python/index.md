@@ -65,22 +65,22 @@ Here you will find links to all the other documents in this folder.
 
 ## CHAPTERS 📖
 
-| CH. Num | Timestamp/Video | Chapter Name/Title                                  |
-| ------- | --------------- | --------------------------------------------------- |
-| 01      | --              | [Introduction](/courses/01_Python/01.01__Intro.md)  |
-| 02      | --              | [Variables](/courses/01_Python/01.02__Variables.md) |
-| 03      | --              | [Functions]                                         |
-| 04      | --              | [Scope]                                             |
-| 05      | --              | [Testing and Debugging]                             |
-| 06      | --              | [Computing]                                         |
-| 07      | --              | [Comparisons]                                       |
-| 08      | --              | [Loops]                                             |
-| 09      | --              | [Lists]                                             |
-| 10      | --              | [Dictionaries]                                      |
-| 11      | --              | [Sets]                                              |
-| 12      | --              | [Errors]                                            |
-| 13      | --              | [Practice]                                          |
-| 14      | --              | [Quiz]                                              |
+| CH. Num | Timestamp/Video | Chapter Name/Title                            |
+| ------- | --------------- | --------------------------------------------- |
+| 01      | --              | [Introduction](01.01__Intro.md)               |
+| 02      | --              | [Variables](01.02__Variables.md)              |
+| 03      | --              | [Functions](01.03__Functions.md)              |
+| 04      | --              | [Scope](01.04__Scope.md)                      |
+| 05      | --              | [Testing and Debugging](01.05__Test-Debug.md) |
+| 06      | --              | [Computing]                                   |
+| 07      | --              | [Comparisons]                                 |
+| 08      | --              | [Loops]                                       |
+| 09      | --              | [Lists]                                       |
+| 10      | --              | [Dictionaries]                                |
+| 11      | --              | [Sets]                                        |
+| 12      | --              | [Errors]                                      |
+| 13      | --              | [Practice]                                    |
+| 14      | --              | [Quiz]                                        |
 
 
 ---

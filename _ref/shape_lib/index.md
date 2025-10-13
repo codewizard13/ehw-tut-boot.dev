@@ -186,19 +186,19 @@ Printing values and running your code is a great way to debug your code. You can
 </section>
 
 ```
-<section class="info-banner"><span style="font-weight:700">💡 [Title_in_Title_Case] </span>
+<section class="info-banner"><span>💡 [Title_in_Title_Case] </span>
 
 // Content Here
 
 </section>
 ```
 
-<section class="info-banner"><span style="font-weight:700; margin-right:1rem">💡 PRO TIP: </span>
+<section class="info-banner"><span>💡 PRO TIP: </span>
 In Python, functions must be defined before they are called
 </section>
 
 ```
-<section class="info-banner"><span style="font-weight:700; margin-right:1rem">💡 PRO TIP: </span>
+<section class="info-banner"><span>💡 PRO TIP: </span>
 
 // Content Here
 
