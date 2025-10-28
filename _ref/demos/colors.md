@@ -1,20 +1,28 @@
 <!-- ===========================================================================
-@file _shape-snippets.md
-@date 2025-09-26 09:44 AM CDT
+@file _ref/demos/colors.md
+@date 2025-10-28 01:03 PM CDT
 @description
-  Centralized library of reusable span label, status banner, and shaped object snippets for Markdown documentation.
-  Designed for consistent UI snippet reuse and easy copy-paste inclusion.
+  Centralized visual reference of pastel color swatches used throughout the documentation library.
+  Provides functional grouping by UI purpose (documentation, banners, highlights, and labels)
+  to ensure styling consistency across all related repositories and projects.
+
+  Serves as a supplemental companion to _ref/shape_lib/index.md, focusing specifically on color theming
+  and the relationship between defined design tokens and implemented CSS class applications.
+  
   Assumes required CSS is loaded via:
-    - ../../_css/main.css for general tags and labels
-    - ../../_css/status-messages.css for status banner styles
+    - ../../_css/main.css for general components and color references
+
   Includes:
-    - Section headings and rendered descriptions
-    - Live rendered HTML snippets ("in the wild")
-    - Copy-paste HTML code blocks
-  Note: This renders well in VSCode Markdown Preview but styling may be lost in GitHub Markdown.
-    Export to PDF or HTML for durable styled outputs.
-@author Eric L. Hepperle
-========================================================================== -->
+    - Rendered color samples with live previews
+    - Associated class and element mappings
+    - Optional HTML swatch table templates
+
+  Recommended use:
+    Reference within Markdown documentation or exported views (HTML/PDF)
+    for maintaining visual consistency across team-shared notes and assets.
+@author
+  Eric L. Hepperle
+=========================================================================== -->
 
 <!-- Custom Stylesheet Reference -->
 <link rel="stylesheet" href="../../_css/main.css">
@@ -22,7 +30,47 @@
 
 ![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
 
-# 📦 PASTEL COLORS REFERENCE
+# 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
+
+A structured visual catalog of pastel color swatches and their corresponding UI class references, consolidating all reusable styling examples from `main.css`.  
+Each entry includes live render previews, mapped CSS class locations, and associated design roles for cohesive visual implementation.
+
+***
+
+## Usage Guidelines
+
+- Use these tables to identify and apply pastel color classes consistently across interface elements.  
+- Reference only defined CSS classes (avoid direct inline styling).  
+- Maintain version alignment with active `main.css` builds.  
+- Utilize this document as both a visual lookup and a reusable snippet companion for course documentation.
+
+***
+
+<details open>
+  <summary><h2>Table of Contents</h2></summary>
+
+- [📦 Pastel Colors Reference](#-pastel-colors-reference-for-bootdev-course-notes)  
+  - [Usage Guidelines](#usage-guidelines)  
+  - [Content](#content)  
+  - [Revision History](#revision-history)
+
+</details>
+
+***
+
+## CONTENT
+
+A grouped and descriptive palette of pastel colors from `main.css`, organized by their functional role in documentation design—covering informational banners, content highlights, UI tags, and other themed label styles.
+
+
+
+<!-- Custom Stylesheet Reference -->
+<link rel="stylesheet" href="../../_css/main.css">
+<!-- <link rel="stylesheet" href="../../_css/status-messages.css"> -->
+
+![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
+
+# 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
 
 A structured visual catalog of pastel color swatches and associated UI class references, consolidating reusable styling examples from `main.css`.  
 Each entry includes rendered previews, class locations, and color associations for consistent design implementation.
@@ -38,15 +86,19 @@ Each entry includes rendered previews, class locations, and color associations f
 
 ***
 
-<details open>
-  <summary><h2>Table of Contents</h2></summary>
+- [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes)
+  - [Usage Guidelines](#usage-guidelines)
+  - [CONTENT](#content)
+- [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes-1)
+  - [Usage Guidelines](#usage-guidelines-1)
+  - [CONTENT](#content-1)
+    - [Documentation and Tagging](#documentation-and-tagging)
+    - [Alerts and Status Banners](#alerts-and-status-banners)
+    - [Notes, Callouts, and Highlights](#notes-callouts-and-highlights)
+    - [UI Elements and Labels](#ui-elements-and-labels)
+- [HTML Color Swatch Template](#html-color-swatch-template)
+  - [✅ Revision History](#-revision-history)
 
-- [📦 SHAPE SNIPPET DOCUMENT](#-shape-snippet-document)  
-  - [Usage Guidelines](#usage-guidelines)  
-  - [CONTENT](#content)  
-  - [Revision History](#revision-history)
-
-</details>
 
 ***
 
@@ -138,3 +190,4 @@ Would you like the next version to include light-to-dark or hue-based sorting wi
 | Version | Date       | Author           | Notes                                                           |
 | ------- | ---------- | ---------------- | --------------------------------------------------------------- |
 | 1.00    | 2025-10-28 | Eric L. Hepperle | Initial draft created with grouped color palette documentation. |
+| 1.01    | 2025-10-28 | Eric L. Hepperle | Update file docblock and TOC.                                   |
