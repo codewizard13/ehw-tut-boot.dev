@@ -568,3 +568,47 @@ p:has(.label-verbatim) {
   display: inline-block;
   border-top-left-radius: 0.4rem;
 }
+
+
+
+/* ////////////////////////////  */
+
+  :root {
+    --clr--periwinkle: #d8e2ff;
+    --clr--mint-frost: #e7fff3;
+  }
+  /* Feature section for Boot.dev operation container */
+.mini-lesson-sec {
+  background: var(--clr--mint-frost);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 0.6rem;
+  /* border: solid gainsboro 0.5px; */
+  border: solid mediumpurple 2px;
+}
+/* Boot.dev meta instruction/operation label */
+.mini-lesson-label {
+  background: var(--clr--mint-frost);
+  min-height: 1rem;
+  display: inline-block;
+  border: solid black 2px;
+  padding: 0.3rem;
+  color: black;
+  font-weight: 500;
+  padding-right: 1rem;
+  border-radius: 0 5px 5px 0;
+  border-left: none !important;
+  padding-left: 0;
+  margin-top: 2rem;
+}
+.mini-lesson-label::before {
+  content: "⚙️";
+  /* font-family: FontAwesome; */
+  /* content: "\f15c"; */
+  padding: 0.3rem 0.6rem;
+  background: #191d29;
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+  margin-right: 0.8rem;
+}
