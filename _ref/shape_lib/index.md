@@ -6,7 +6,6 @@
   Designed for consistent UI snippet reuse and easy copy-paste inclusion.
   Assumes required CSS is loaded via:
     - ../../_css/main.css for general tags and labels
-    - ../../_css/status-messages.css for status banner styles
   Includes:
     - Section headings and rendered descriptions
     - Live rendered HTML snippets ("in the wild")
@@ -179,7 +178,7 @@ Use these tags at the top of steps, inside callouts, or at key transitions to cl
 
 ### Info Section with Internal Heading
 
-<section class="info-banner"><span style="font-weight:700">💡 Printing to Debug Your Code </span>
+<section class="info-banner"><span>💡 Printing to Debug Your Code </span>
 
 Printing values and running your code is a great way to debug your code. You can see what values are stored in various variables, find your mistakes, and fix them. Add print statements and run your code as you go! It's a great habit to get into to make sure that each line you write is doing what you expect it to do.
 
