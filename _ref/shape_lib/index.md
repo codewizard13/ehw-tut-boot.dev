@@ -64,6 +64,7 @@ All objects assume CSS classes are defined in `main.css` and/or section-specific
     - [Error Section](#error-section)
     - [Verbatim Copy Section](#verbatim-copy-section)
     - [Verbatim Copy-Assignment-Answer Section](#verbatim-copy-assignment-answer-section)
+      - [**Snippet:**](#snippet)
   - [✅ Revision History](#-revision-history)
   
 </details>
@@ -311,17 +312,28 @@ A new variable called `radius` is created and set to the value `5`.
 
 <br>
 
-**✍️ MY ANSWER:**
+<section class="assignment-answer-sec">
+
+**✍️ ASSIGNMENT STARTING CODE:**
 
 <span class="code-filename">main.py</span>
+
+```py
+// answer starting code here
+```
+
+**✍️ MY ANSWER:**
 
 ```py
 // answer code here
 ```
 
-**Snippet:**
+</section><!-- END .assignment-answer-sec -->
+
+#### **Snippet:**
 
 ````sh
+
 <section class="callout"><span class="label-verbatim">COPIED VERBATIM:  👇🏽</span>
 
 // VERBATIM_CONTENT
@@ -336,13 +348,23 @@ A new variable called `radius` is created and set to the value `5`.
 
 <br>
 
-**✍️ MY ANSWER:**
+<section class="assignment-answer-sec">
+
+**✍️ ASSIGNMENT STARTING CODE:**
 
 <span class="code-filename">main.py</span>
 
 ```py
+// answer starting code here
+```
+
+**✍️ MY ANSWER:**
+
+```py
 // answer code here
 ```
+
+</section><!-- END .assignment-answer-sec -->
 
 ````
 
