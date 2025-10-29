@@ -612,3 +612,15 @@ p:has(.label-verbatim) {
   padding: 0.5rem 0.7rem;
   margin-right: 0.8rem;
 }
+
+
+
+/* SECTION: Assignment Answer block */
+.assignment-answer-sec {
+  border: solid 2px #333;
+  padding: .8rem;
+  border-radius: .6rem
+}
+.assignment-answer-sec .code-filename {
+  margin-top: .2rem !important;
+}
