@@ -32,50 +32,7 @@
 
 # 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
 
-A structured visual catalog of pastel color swatches and their corresponding UI class references, consolidating all reusable styling examples from `main.css`.  
-Each entry includes live render previews, mapped CSS class locations, and associated design roles for cohesive visual implementation.
-
-***
-
-## Usage Guidelines
-
-- Use these tables to identify and apply pastel color classes consistently across interface elements.  
-- Reference only defined CSS classes (avoid direct inline styling).  
-- Maintain version alignment with active `main.css` builds.  
-- Utilize this document as both a visual lookup and a reusable snippet companion for course documentation.
-
-***
-
-<details open>
-  <summary><h2>Table of Contents</h2></summary>
-
-- [📦 Pastel Colors Reference](#-pastel-colors-reference-for-bootdev-course-notes)  
-  - [Usage Guidelines](#usage-guidelines)  
-  - [Content](#content)  
-  - [Revision History](#revision-history)
-
-</details>
-
-***
-
-## CONTENT
-
-A grouped and descriptive palette of pastel colors from `main.css`, organized by their functional role in documentation design—covering informational banners, content highlights, UI tags, and other themed label styles.
-
-
-
-<!-- Custom Stylesheet Reference -->
-<link rel="stylesheet" href="../../_css/main.css">
-<!-- <link rel="stylesheet" href="../../_css/status-messages.css"> -->
-
-![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
-
-# 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
-
-A structured visual catalog of pastel color swatches and associated UI class references, consolidating reusable styling examples from `main.css`.  
-Each entry includes rendered previews, class locations, and color associations for consistent design implementation.
-
-***
+A structured visual catalog of pastel color swatches and associated UI class references, consolidating reusable styling examples from `main.css`.  Each entry includes rendered previews, class locations, and color associations for consistent design implementation.
 
 ## Usage Guidelines
 
@@ -86,25 +43,19 @@ Each entry includes rendered previews, class locations, and color associations f
 
 ***
 
+<details open>
+  <summary><h2>Table of Contents</h2></summary>
+
 - [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes)
   - [Usage Guidelines](#usage-guidelines)
-  - [CONTENT](#content)
-- [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes-1)
-  - [Usage Guidelines](#usage-guidelines-1)
-  - [CONTENT](#content-1)
     - [Documentation and Tagging](#documentation-and-tagging)
     - [Alerts and Status Banners](#alerts-and-status-banners)
     - [Notes, Callouts, and Highlights](#notes-callouts-and-highlights)
     - [UI Elements and Labels](#ui-elements-and-labels)
-- [HTML Color Swatch Template](#html-color-swatch-template)
+    - [Pastel Section Color Variations](#pastel-section-color-variations)
   - [✅ Revision History](#-revision-history)
 
-
-***
-
-## CONTENT
-
-A grouped palette of pastel colors from `main.css`, organized by their functional use across documentation, status banners, highlights, and UI element classes.
+</details>
 
 ***
 
@@ -164,23 +115,20 @@ A grouped palette of pastel colors from `main.css`, organized by their functiona
 
 ***
 
-Would you like the next version to include light-to-dark or hue-based sorting within each group?
+### Pastel Section Color Variations
+
+| Index | Section Background                                                   | Section Border                                                       | Label Background                                                     | Notes |
+| ----- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | ----- |
+| 1     | <span style="background:#FFEDF3;" class="swatch-orig">#FFEDF3</span> | <span style="background:#DB7082;" class="swatch-orig">#DB7082</span> | <span style="background:#FFC2D5;" class="swatch-orig">#FFC2D5</span> |       |
+| 2     | <span style="background:#FFF7ED;" class="swatch-orig">#FFF7ED</span> | <span style="background:#DBBE70;" class="swatch-orig">#DBBE70</span> | <span style="background:#FFE6C2;" class="swatch-orig">#FFE6C2</span> |       |
+| 3     | <span style="background:#F2FFED;" class="swatch-orig">#F2FFED</span> | <span style="background:#7BDB70;" class="swatch-orig">#7BDB70</span> | <span style="background:#D0FFC2;" class="swatch-orig">#D0FFC2</span> |       |
+| 4     | <span style="background:#EDFFFB;" class="swatch-orig">#EDFFFB</span> | <span style="background:#70DBD5;" class="swatch-orig">#70DBD5</span> | <span style="background:#C2FFF4;" class="swatch-orig">#C2FFF4</span> |       |
+| 5     | <span style="background:#F0EDFF;" class="swatch-orig">#F0EDFF</span> | <span style="background:#9370DB;" class="swatch-orig">#9370DB</span> | <span style="background:#CEC2FF;" class="swatch-orig">#CEC2FF</span> |       |
+| 6     | <span style="background:#FFF2ED;" class="swatch-orig">#FFF2ED</span> | <span style="background:#DB9E70;" class="swatch-orig">#DB9E70</span> | <span style="background:#FFD4C2;" class="swatch-orig">#FFD4C2</span> |       |
+| 7     | <span style="background:#EDFAFF;" class="swatch-orig">#EDFAFF</span> | <span style="background:#70ADDB;" class="swatch-orig">#70ADDB</span> | <span style="background:#C2EDFF;" class="swatch-orig">#C2EDFF</span> |       |
+| 8     | <span style="background:#FDEDFF;" class="swatch-orig">#FDEDFF</span> | <span style="background:#DB70D3;" class="swatch-orig">#DB70D3</span> | <span style="background:#FCC2FF;" class="swatch-orig">#FCC2FF</span> |       |
 
 
-
-# HTML Color Swatch Template
-
-
-
-| Background | Text    | Style Vibe              | Swatch                                                                           |
-| ---------- | ------- | ----------------------- | -------------------------------------------------------------------------------- |
-| #FFFACD    | #003366 | Cheerful & professional | <span style="background-color:#FFFACD;color:#003366;" class="swatch">Text</span> |
-| #D0F0F0    | #333333 | Calm & modern           | <span style="background-color:#D0F0F0;color:#333333;" class="swatch">Text</span> |
-| #FFE5B4    | #4B2E2E | Warm & inviting         | <span style="background-color:#FFE5B4;color:#4B2E2E;" class="swatch">Text</span> |
-| #E6E6FA    | #000080 | Elegant & clean         | <span style="background-color:#E6E6FA;color:#000080;" class="swatch">Text</span> |
-| #CCFFCC    | #006400 | Fresh & natural         | <span style="background-color:#CCFFCC;color:#006400;" class="swatch">Text</span> |
-| #F0F0F0    | #000000 | Minimalist & sharp      | <span style="background-color:#F0F0F0;color:#000000;" class="swatch">Text</span> |
-| #D0EFFF    | #191970 | Crisp & techy           | <span style="background-color:#D0EFFF;color:#191970;" class="swatch">Text</span> |
 
 ***
 
@@ -191,3 +139,4 @@ Would you like the next version to include light-to-dark or hue-based sorting wi
 | ------- | ---------- | ---------------- | --------------------------------------------------------------- |
 | 1.00    | 2025-10-28 | Eric L. Hepperle | Initial draft created with grouped color palette documentation. |
 | 1.01    | 2025-10-28 | Eric L. Hepperle | Update file docblock and TOC.                                   |
+| 1.02    | 2025-10-30 | Eric L. Hepperle | Add pastel section variations, deduplicate intro content.       |
