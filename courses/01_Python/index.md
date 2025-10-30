@@ -17,10 +17,10 @@
 | File Name                | **index.md**                             |
 | ------------------------ | ---------------------------------------- |
 | **Date Created**         | 09/25/25                                 |
-| **Date Modified**        | 09/26/25                                 |
+| **Date Modified**        | 10/30/25                                 |
 | **Platform**             | Website                                  |
 | **Channel**              | [Boot.dev](https://www.boot.dev/lessons) |
-| **Version**              | 0.01.00                                  |
+| **Version**              | 0.01.02                                  |
 | **Programmer / Student** | **Eric L. Hepperle**                     |
 | **AI Assistance**:       | ChatGPT, Perplexity                      |
 
@@ -28,38 +28,14 @@
 
 ---
 
-<!-- SECTION: Tags for short related (1-3 word phrase per tag) concepts (long titled articles belong in the References / See Also section above) -->
-<section id="sec-tags">
-
-## 🏷️ Tags:
-
-- Python
-
-</section>
-
----
-
-
-
 **In this Folder:**
-
 
 <section class="ehw-doc-descr">
 
-Here you will find links to all the other documents in this folder.
+This is the main index file for the this course folder.
 
 </section>
 
-
-## 📂 Chapter 01
-
-- [Bash: How to Overwrite Contents of One File with Another](/how-to/bash-copy-file-contents.md)
-- [Bash: How to Search and Replace Text in File](/how-to/bash-search-replace-file-content.md)
-- [Bash: How to Add a Newline Character to End of File](/how-to/bash-append-newline-to-file.md)
-
-## 📂 Chapter 02
-
-- [HTML Named Hex Color Shades](/coding/html-hex-colors.md)
 
 ---
 
@@ -73,7 +49,7 @@ Here you will find links to all the other documents in this folder.
 | 04      | --              | [Scope](01.04__Scope.md)                      |
 | 05      | --              | [Testing and Debugging](01.05__Test-Debug.md) |
 | 06      | --              | [Computing](01.06__Computing.md)              |
-| 07      | --              | [Comparisons]                                 |
+| 07      | --              | [Comparisons](01.07__Comparisons.md)          |
 | 08      | --              | [Loops]                                       |
 | 09      | --              | [Lists]                                       |
 | 10      | --              | [Dictionaries]                                |
@@ -84,12 +60,3 @@ Here you will find links to all the other documents in this folder.
 
 
 ---
-
-
-<span class="code-filename">oembed-widget.php</span>
-
-
----
-
-
-## BOOKMARK
