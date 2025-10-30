@@ -21,14 +21,23 @@
 
 <br>
 
-**In this Chapter:**
+**In this Chapter:**  
 
+<section class="ehw-doc-descr">  
 
-<section class="ehw-doc-descr">
+### Learn to Code in Python, Ch. 05: *Testing and Debuging*
 
-These are my personal notes from **Boot.dev’s Chapter 07: Comparisons**. This chapter explores Python’s **comparison operators** 
-<br><br>... etc
+These are my personal notes on **<MAIN_TOPIC_LIST>** from Boot.dev. This chapter teaches how to <write 2-3 concise sentences summarizing what the chapter teaches and why it matters in real-world contexts, and clearly showing important bolded concepts and terms>.<end with the single-line real-world application / benefits sentence included at least 3 bolded real-world application phrases (e.g., medical software, debugging complex decision trees, gaming sofware, database management, livestreaming applications, industrial (PLC) logic controls, robotics, roomba robot vaccuums, etc.)>.   
 
+### Learning Outcomes  
+
+By the end of this chapter, I should be able to:  
+
+- <Outcome 1 – actionable and measurable>
+- <Outcome 2 – applying in different contexts>
+- <Outcome 3 – debugging or preventing common issues>
+- <Outcome 4 – explaining clearly>
+- <Outcome 5 – executing essential workflows>
 
 </section>
 
@@ -63,6 +72,8 @@ These are my personal notes from **Boot.dev’s Chapter 07: Comparisons**. This 
 - [📒 COURSE NOTES: Learn to Code in Python](#-course-notes-learn-to-code-in-python)
   - [📂 Chapter 07: **Comparisons**](#-chapter-07-comparisons)
     - [🏚️ README | 📁 Index | 🔖 Bookmark](#️-readme---index---bookmark)
+    - [Learn to Code in Python, Ch. 05: *Testing and Debuging*](#learn-to-code-in-python-ch-05-testing-and-debuging)
+    - [Learning Outcomes](#learning-outcomes)
     - [Applied Examples](#applied-examples)
   - [🏷️ Tags:](#️-tags)
     - [▶️ L1: Comparison Operators](#️-l1-comparison-operators)
