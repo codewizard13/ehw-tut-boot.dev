@@ -98,7 +98,7 @@ or the tip
 > 💡 **TIP**: *Placeholder content here in italics.*
 
 ```md
-> 💡 *Placeholder content here in italics.
+> 💡 **TIP**: *Placeholder content here in italics.*
 ```
 
 
