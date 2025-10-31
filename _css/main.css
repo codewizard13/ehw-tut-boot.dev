@@ -675,3 +675,57 @@ p:has(.label-challenge) {
   display: inline-block;
   border-top-left-radius: 0.4rem;
 }
+
+
+
+   
+
+:root {
+    --clr--carolina-blue: #70ADDB;
+    --clr--uranian-blue: #C2EDFF;
+
+    --role--boots-feedback-sec-bg: aliceblue;
+    --role--boots-feedback-sec-border: var(--clr--carolina-blue);
+    --role--boots-feedback-label-bg: var(--clr--uranian-blue);
+    --role--boots-feedback-label-border: none;
+}
+
+/* 🐻 Boots Interview Feedback Section */
+.boots-feeback {
+  background-color: var(--role--boots-feedback-sec-bg);
+  border: 2px solid var(--role--boots-feedback-sec-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0;
+  font-family: monospace; /* Monospace for verbatim text */
+  margin-top: 2.5rem; /* Offsett to accomodate for the label overlap */
+}
+
+/* 🐻 Verbatim label */
+.label-boots-feeback {
+  background: var(--role--boots-feedback-label-bg); /* Soft yellow */
+  border: solid 2px var(--role--boots-feedback-sec-border);
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  top: -2.5rem;
+  padding-right: 0.4rem;
+}
+
+/* 🪚 Remove extra spacing if wrapped in <p> */
+p:has(.label-boots-feeback) {
+  margin: 0 !important;
+}
+
+/* 🐻 Label icon prefix */
+.label-boots-feeback::before {
+  content: "🐻";
+  background: #191d29;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  border-top-left-radius: 0.4rem;
+}
