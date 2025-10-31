@@ -729,3 +729,8 @@ p:has(.label-boots-feeback) {
   display: inline-block;
   border-top-left-radius: 0.4rem;
 }
+
+/* 📋 Code blocks inside callouts */
+.boots-feeback.callout pre {
+  background: white; /* Subtle blue-gray background */
+}
