@@ -54,7 +54,7 @@ A structured visual catalog of pastel color swatches and associated UI class ref
     - [UI Elements and Labels](#ui-elements-and-labels)
       - [Key:](#key)
     - [Section Colors with Names](#section-colors-with-names)
-    - [Pastel Section Color Variations](#pastel-section-color-variations)
+    - [Pastel Section Color Sets](#pastel-section-color-sets)
   - [✅ Revision History](#-revision-history)
 
 </details>
@@ -148,7 +148,7 @@ A structured visual catalog of pastel color swatches and associated UI class ref
 | 20   | \#DB70D3 | Orchid              | `orchid`              |                              | <span style="background:#DB70D3" class="swatch-orig">`orchid`</span>       |
 | 21   | \#FCC2FF | Mauve               |                       | `mauve` \#E0B0FF             | <span style="background:#FCC2FF" class="swatch-orig">***???***</span>          |
 
-### Pastel Section Color Variations
+### Pastel Section Color Sets
 
 | Index | Section Background                                                   | Section Border                                                       | Label Background                                                     | Color Names |
 | ----- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | ----- |
