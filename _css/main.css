@@ -152,15 +152,15 @@ h3[id^="vid"] {
 }
 
 /* Bookmark banner */
-#bookmark {
+[id^="bookmark"] {
   background: lightcyan;
   display: inline-block;
   padding: 1rem;
-  border: solid cadetblue 4px;
+  border: solid cadetblue 4px !important;
   border-radius: 0.8rem;
   /* transform: skew(20deg); */
 }
-#bookmark::before {
+[id^="bookmark"]::before {
   content: "🔖";
   /* font-family: FontAwesome; */
   /* content: "\f15c"; */
