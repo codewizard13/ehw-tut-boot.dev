@@ -152,15 +152,15 @@ h3[id^="vid"] {
 }
 
 /* Bookmark banner */
-#bookmark {
+[id^="bookmark"] {
   background: lightcyan;
   display: inline-block;
   padding: 1rem;
-  border: solid cadetblue 4px;
+  border: solid cadetblue 4px !important;
   border-radius: 0.8rem;
   /* transform: skew(20deg); */
 }
-#bookmark::before {
+[id^="bookmark"]::before {
   content: "🔖";
   /* font-family: FontAwesome; */
   /* content: "\f15c"; */
@@ -569,15 +569,13 @@ p:has(.label-verbatim) {
   border-top-left-radius: 0.4rem;
 }
 
-
-
 /* ////////////////////////////  */
 
-  :root {
-    --clr--periwinkle: #d8e2ff;
-    --clr--mint-frost: #e7fff3;
-  }
-  /* Feature section for Boot.dev operation container */
+:root {
+  --clr--periwinkle: #d8e2ff;
+  --clr--mint-frost: #e7fff3;
+}
+/* Feature section for Boot.dev operation container */
 .mini-lesson-sec {
   background: var(--clr--mint-frost);
   padding: 1rem;
@@ -613,14 +611,126 @@ p:has(.label-verbatim) {
   margin-right: 0.8rem;
 }
 
-
-
 /* SECTION: Assignment Answer block */
 .assignment-answer-sec {
   border: solid 2px #333;
-  padding: .8rem;
-  border-radius: .6rem
+  padding: 0.8rem;
+  border-radius: 0.6rem;
 }
 .assignment-answer-sec .code-filename {
-  margin-top: .2rem !important;
+  margin-top: 0.2rem !important;
+}
+
+
+
+/* Boot.dev challenge completion sections */
+:root {
+  --clr--seashell: #fff2ed;
+  --clr--buff: #db9e70;
+  --clr--pale-dogwood: #ffd4c2;
+
+  /* ROLES */
+
+  --role-sec-bg: var(--clr--seashell);
+  --role-sec-border: var(--clr--buff);
+  --role-label-bg: var(--clr--pale-dogwood);
+}
+
+/* ⚔️ Challenge container */
+.challenge {
+  background-color: var(--role-sec-bg);
+  border: 2px solid var(--role-sec-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0;
+  font-family: monospace; /* Monospace for verbatim text */
+  margin-top: 2.5rem; /* Offsett to accomodate for the label overlap */
+}
+
+/* ⚔️ Verbatim label */
+.label-challenge {
+  background: var(--role-label-bg); /* Soft yellow */
+  border: solid 2px brown;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  top: -2.5rem;
+  padding-right: 0.4rem;
+}
+
+/* 🪚 Remove extra spacing if wrapped in <p> */
+p:has(.label-challenge) {
+  margin: 0 !important;
+}
+
+/* ⚔️ Label icon prefix */
+.label-challenge::before {
+  content: "⚔️";
+  background: #191d29;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  border-top-left-radius: 0.4rem;
+}
+
+
+
+   
+
+:root {
+    --clr--carolina-blue: #70ADDB;
+    --clr--uranian-blue: #C2EDFF;
+
+    --role--boots-feedback-sec-bg: aliceblue;
+    --role--boots-feedback-sec-border: var(--clr--carolina-blue);
+    --role--boots-feedback-label-bg: var(--clr--uranian-blue);
+    --role--boots-feedback-label-border: none;
+}
+
+/* 🐻 Boots Interview Feedback Section */
+.boots-feeback {
+  background-color: var(--role--boots-feedback-sec-bg);
+  border: 2px solid var(--role--boots-feedback-sec-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0;
+  font-family: monospace; /* Monospace for verbatim text */
+  margin-top: 2.5rem; /* Offsett to accomodate for the label overlap */
+}
+
+/* 🐻 Verbatim label */
+.label-boots-feeback {
+  background: var(--role--boots-feedback-label-bg); /* Soft yellow */
+  border: solid 2px var(--role--boots-feedback-sec-border);
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  top: -2.5rem;
+  padding-right: 0.4rem;
+}
+
+/* 🪚 Remove extra spacing if wrapped in <p> */
+p:has(.label-boots-feeback) {
+  margin: 0 !important;
+}
+
+/* 🐻 Label icon prefix */
+.label-boots-feeback::before {
+  content: "🐻";
+  background: #191d29;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  border-top-left-radius: 0.4rem;
+}
+
+/* 📋 Code blocks inside callouts */
+.boots-feeback.callout pre {
+  background: white; /* Subtle blue-gray background */
 }

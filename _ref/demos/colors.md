@@ -32,50 +32,7 @@
 
 # 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
 
-A structured visual catalog of pastel color swatches and their corresponding UI class references, consolidating all reusable styling examples from `main.css`.  
-Each entry includes live render previews, mapped CSS class locations, and associated design roles for cohesive visual implementation.
-
-***
-
-## Usage Guidelines
-
-- Use these tables to identify and apply pastel color classes consistently across interface elements.  
-- Reference only defined CSS classes (avoid direct inline styling).  
-- Maintain version alignment with active `main.css` builds.  
-- Utilize this document as both a visual lookup and a reusable snippet companion for course documentation.
-
-***
-
-<details open>
-  <summary><h2>Table of Contents</h2></summary>
-
-- [📦 Pastel Colors Reference](#-pastel-colors-reference-for-bootdev-course-notes)  
-  - [Usage Guidelines](#usage-guidelines)  
-  - [Content](#content)  
-  - [Revision History](#revision-history)
-
-</details>
-
-***
-
-## CONTENT
-
-A grouped and descriptive palette of pastel colors from `main.css`, organized by their functional role in documentation design—covering informational banners, content highlights, UI tags, and other themed label styles.
-
-
-
-<!-- Custom Stylesheet Reference -->
-<link rel="stylesheet" href="../../_css/main.css">
-<!-- <link rel="stylesheet" href="../../_css/status-messages.css"> -->
-
-![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
-
-# 📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes
-
-A structured visual catalog of pastel color swatches and associated UI class references, consolidating reusable styling examples from `main.css`.  
-Each entry includes rendered previews, class locations, and color associations for consistent design implementation.
-
-***
+A structured visual catalog of pastel color swatches and associated UI class references, consolidating reusable styling examples from `main.css`.  Each entry includes rendered previews, class locations, and color associations for consistent design implementation.
 
 ## Usage Guidelines
 
@@ -86,25 +43,21 @@ Each entry includes rendered previews, class locations, and color associations f
 
 ***
 
+<details open>
+  <summary><h2>Table of Contents</h2></summary>
+
 - [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes)
   - [Usage Guidelines](#usage-guidelines)
-  - [CONTENT](#content)
-- [📦 PASTEL COLORS REFERENCE for Boot.dev Course Notes](#-pastel-colors-reference-for-bootdev-course-notes-1)
-  - [Usage Guidelines](#usage-guidelines-1)
-  - [CONTENT](#content-1)
     - [Documentation and Tagging](#documentation-and-tagging)
     - [Alerts and Status Banners](#alerts-and-status-banners)
     - [Notes, Callouts, and Highlights](#notes-callouts-and-highlights)
     - [UI Elements and Labels](#ui-elements-and-labels)
-- [HTML Color Swatch Template](#html-color-swatch-template)
+      - [Key:](#key)
+    - [Section Colors with Names](#section-colors-with-names)
+    - [Pastel Section Color Sets](#pastel-section-color-sets)
   - [✅ Revision History](#-revision-history)
 
-
-***
-
-## CONTENT
-
-A grouped palette of pastel colors from `main.css`, organized by their functional use across documentation, status banners, highlights, and UI element classes.
+</details>
 
 ***
 
@@ -164,23 +117,50 @@ A grouped palette of pastel colors from `main.css`, organized by their functiona
 
 ***
 
-Would you like the next version to include light-to-dark or hue-based sorting within each group?
+#### Key:
+
+> ✅ = Official standard HTML color name; all other names are informal
 
 
+### Section Colors with Names
 
-# HTML Color Swatch Template
+| IDX  | HEX CODE | ORIGINAL COLOR NAME | OFFICIAL COLOR NAME ✅ | MATCHES OTHER STANDARD COLOR | COLOR SWATCH                                                               |
+| :--- | :------- | :------------------ | :-------------------- | :--------------------------- | :------------------------------------------------------------------------- |
+| 1    | \#FFEDF3 | Lavender Blush      |                       |                              | <span style="background:#FFEDF3" class="swatch-orig">Lavender Blush</span> |
+| 2    | \#DB7082 | Blush               |                       |                              | <span style="background:#DB7082" class="swatch-orig">Blush</span>          |
+| 3    | \#FFC2D5 | Orchid Pink         |                       |                              | <span style="background:#FFC2D5" class="swatch-orig">Orchid Pink</span>    |
+| 4    | \#FFF7ED | Floral White        |                       |                              | <span style="background:#FFF7ED" class="swatch-orig">Floral White</span>   |
+| 5    | \#DBBE70 | Ecru                |                       |                              | <span style="background:#DBBE70" class="swatch-orig">Ecru</span>           |
+| 6    | \#FFE6C2 | Wheat               | `wheat`               |                              | <span style="background:#FFE6C2" class="swatch-orig">`wheat`</span>        |
+| 7    | \#F2FFED | Honeydew            | `honeydew`            |                              | <span style="background:#F2FFED" class="swatch-orig">`honeydew`</span>     |
+| 8    | \#7BDB70 | Light Green         |                       | `lightgreen` \#90EE90        | <span style="background:#7BDB70" class="swatch-orig">***???***</span>      |
+| 9    | \#D0FFC2 | Tea Green           |                       |                              | <span style="background:#D0FFC2" class="swatch-orig">Tea Green</span>      |
+| 10   | \#EDFFFB | Azure (web)         |                       | `azure` \#F0FFFF             | <span style="background:#EDFFFB" class="swatch-orig">***???***</span>      |
+| 11   | \#70DBD5 | Tiffany Blue        |                       |                              | <span style="background:#70DBD5" class="swatch-orig">Tiffany Blue</span>   |
+| 12   | \#C2FFF4 | Celeste             |                       |                              | <span style="background:#C2FFF4" class="swatch-orig">Celeste</span>        |
+| 13   | \#F0EDFF | Lavender (web)      |                       | `lavender` \#E6E6FA          | <span style="background:#F0EDFF" class="swatch-orig">***???***</span>      |
+| 14   | \#9370DB | Amethyst            | `mediumpurple`        |                              | <span style="background:#9370DB" class="swatch-orig">`mediumpurple`</span> |
+| 15   | \#CEC2FF | Periwinkle          |                       |                              | <span style="background:#CEC2FF" class="swatch-orig">Periwinkle</span>     |
+| 16   | \#FFF2ED | Seashell            | `seashell`            |                              | <span style="background:#FFF2ED" class="swatch-orig">`seashell`</span>     |
+| 17   | \#DB9E70 | Buff                |                       |                              | <span style="background:#DB9E70" class="swatch-orig">Buff</span>           |
+| 18   | \#FFD4C2 | Pale Dogwood        |                       |                              | <span style="background:#FFD4C2" class="swatch-orig">Pale Dogwood</span>   |
+| 19   | \#FDEDFF | Pale Purple         |                       |                              | <span style="background:#FDEDFF" class="swatch-orig">Pale Purple</span>    |
+| 20   | \#DB70D3 | Orchid              | `orchid`              |                              | <span style="background:#DB70D3" class="swatch-orig">`orchid`</span>       |
+| 21   | \#FCC2FF | Mauve               |                       | `mauve` \#E0B0FF             | <span style="background:#FCC2FF" class="swatch-orig">***???***</span>      |
 
+### Pastel Section Color Sets
 
+| Index | Section Background                                                   | Section Border                                                       | Label Background                                                     | Color Names                                      |
+| ----- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| 1     | <span style="background:#FFEDF3;" class="swatch-orig">#FFEDF3</span> | <span style="background:#DB7082;" class="swatch-orig">#DB7082</span> | <span style="background:#FFC2D5;" class="swatch-orig">#FFC2D5</span> | `Lavender Blush`, `Blush`, `Orchid Pink`         |
+| 2     | <span style="background:#FFF7ED;" class="swatch-orig">#FFF7ED</span> | <span style="background:#DBBE70;" class="swatch-orig">#DBBE70</span> | <span style="background:#FFE6C2;" class="swatch-orig">#FFE6C2</span> | `Floral White`, `Ecru`, `✅_wheat`                |
+| 3     | <span style="background:#F2FFED;" class="swatch-orig">#F2FFED</span> | <span style="background:#7BDB70;" class="swatch-orig">#7BDB70</span> | <span style="background:#D0FFC2;" class="swatch-orig">#D0FFC2</span> | `✅_honeydew`, `Light Green`, `Tea Green`         |
+| 4     | <span style="background:#EDFFFB;" class="swatch-orig">#EDFFFB</span> | <span style="background:#70DBD5;" class="swatch-orig">#70DBD5</span> | <span style="background:#C2FFF4;" class="swatch-orig">#C2FFF4</span> | `Azure (web)`, `Tiffany Blue`, `Celeste`         |
+| 5     | <span style="background:#F0EDFF;" class="swatch-orig">#F0EDFF</span> | <span style="background:#9370DB;" class="swatch-orig">#9370DB</span> | <span style="background:#CEC2FF;" class="swatch-orig">#CEC2FF</span> | `Lavender (web)`, `✅_mediumpurple`, `Periwinkle` |
+| 6     | <span style="background:#FFF2ED;" class="swatch-orig">#FFF2ED</span> | <span style="background:#DB9E70;" class="swatch-orig">#DB9E70</span> | <span style="background:#FFD4C2;" class="swatch-orig">#FFD4C2</span> | `✅_seashell`, `Buff`, `Pale Dogwood`             |
+| 7     | <span style="background:#EDFAFF;" class="swatch-orig">#EDFAFF</span> | <span style="background:#70ADDB;" class="swatch-orig">#70ADDB</span> | <span style="background:#C2EDFF;" class="swatch-orig">#C2EDFF</span> | `✅_aliceblue`, `Carolina Blue`, `Uranian Blue`   |
+| 8     | <span style="background:#FDEDFF;" class="swatch-orig">#FDEDFF</span> | <span style="background:#DB70D3;" class="swatch-orig">#DB70D3</span> | <span style="background:#FCC2FF;" class="swatch-orig">#FCC2FF</span> |               `Pale Purple`, `✅_orchid`, `Mauve`                                   |
 
-| Background | Text    | Style Vibe              | Swatch                                                                           |
-| ---------- | ------- | ----------------------- | -------------------------------------------------------------------------------- |
-| #FFFACD    | #003366 | Cheerful & professional | <span style="background-color:#FFFACD;color:#003366;" class="swatch">Text</span> |
-| #D0F0F0    | #333333 | Calm & modern           | <span style="background-color:#D0F0F0;color:#333333;" class="swatch">Text</span> |
-| #FFE5B4    | #4B2E2E | Warm & inviting         | <span style="background-color:#FFE5B4;color:#4B2E2E;" class="swatch">Text</span> |
-| #E6E6FA    | #000080 | Elegant & clean         | <span style="background-color:#E6E6FA;color:#000080;" class="swatch">Text</span> |
-| #CCFFCC    | #006400 | Fresh & natural         | <span style="background-color:#CCFFCC;color:#006400;" class="swatch">Text</span> |
-| #F0F0F0    | #000000 | Minimalist & sharp      | <span style="background-color:#F0F0F0;color:#000000;" class="swatch">Text</span> |
-| #D0EFFF    | #191970 | Crisp & techy           | <span style="background-color:#D0EFFF;color:#191970;" class="swatch">Text</span> |
 
 ***
 
@@ -191,3 +171,5 @@ Would you like the next version to include light-to-dark or hue-based sorting wi
 | ------- | ---------- | ---------------- | --------------------------------------------------------------- |
 | 1.00    | 2025-10-28 | Eric L. Hepperle | Initial draft created with grouped color palette documentation. |
 | 1.01    | 2025-10-28 | Eric L. Hepperle | Update file docblock and TOC.                                   |
+| 1.02    | 2025-10-30 | Eric L. Hepperle | Add pastel section variations, deduplicate intro content.       |
+| 1.03    | 2025-10-31 | Eric L. Hepperle | Add color names table.                                          |
