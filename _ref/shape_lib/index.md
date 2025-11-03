@@ -49,6 +49,7 @@ All objects assume CSS classes are defined in `main.css` and/or section-specific
   - [Usage Guidelines](#usage-guidelines)
   - [Tags, Labels, Section Markers 🏷️](#tags-labels-section-markers-️)
     - [Markdown-Only Note / Tip](#markdown-only-note--tip)
+    - [Output-Results Section](#output-results-section)
     - [Boot.dev Meta Instruction Label](#bootdev-meta-instruction-label)
     - [Bookmark Anchor](#bookmark-anchor)
     - [Code Filename Label](#code-filename-label)
@@ -100,6 +101,39 @@ or the tip
 ```md
 > 💡 **TIP**: *Placeholder content here in italics.*
 ```
+
+### Output-Results Section
+
+
+**📈 OUTPUT RESULTS**
+
+```
+Inputs: 0, 0, 0
+Expected: (0, 0, 0)
+Actual:   (0, 0, 0)
+Pass
+---------------------------------
+Inputs: 1111, 1111, 1111
+Expected: (15, 15, 15)
+Actual:   (15, 15, 15)
+Pass
+---------------------------------
+Inputs: 101010, 110011, 101010
+Expected: (42, 51, 42)
+Actual:   (42, 51, 42)
+Pass
+============= PASS ==============
+6 passed, 0 failed
+```
+
+````sh
+
+**📈 OUTPUT RESULTS**
+
+```
+// RESULTS_PLACEHOLDER
+```
+````
 
 
 ### Boot.dev Meta Instruction Label
