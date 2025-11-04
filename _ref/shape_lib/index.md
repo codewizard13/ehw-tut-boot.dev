@@ -107,7 +107,7 @@ or the tip
 
 **📈 OUTPUT RESULTS**
 
-```
+```sh
 Inputs: 0, 0, 0
 Expected: (0, 0, 0)
 Actual:   (0, 0, 0)
@@ -130,7 +130,7 @@ Pass
 
 **📈 OUTPUT RESULTS**
 
-```
+```sh
 // RESULTS_PLACEHOLDER
 ```
 ````
