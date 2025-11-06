@@ -25,7 +25,7 @@
 
 <section class="ehw-doc-descr">  
 
-### Learn to Code in Python, Ch. 05: *Testing and Debuging*
+### Learn to Code in Python, Ch. 07: *Comparisons*
 
 These are my personal notes on **<MAIN_TOPIC_LIST>** from Boot.dev. This chapter teaches how to <write 2-3 concise sentences summarizing what the chapter teaches and why it matters in real-world contexts, and clearly showing important bolded concepts and terms>.<end with the single-line real-world application / benefits sentence included at least 3 bolded real-world application phrases (e.g., medical software, debugging complex decision trees, gaming sofware, database management, livestreaming applications, industrial (PLC) logic controls, robotics, roomba robot vaccuums, etc.)>.   
 
@@ -72,7 +72,7 @@ By the end of this chapter, I should be able to:
 - [📒 COURSE NOTES: Learn to Code in Python](#-course-notes-learn-to-code-in-python)
   - [📂 Chapter 07: **Comparisons**](#-chapter-07-comparisons)
     - [🏚️ README | 📁 Index | 🔖 Bookmark](#️-readme---index---bookmark)
-    - [Learn to Code in Python, Ch. 05: *Testing and Debuging*](#learn-to-code-in-python-ch-05-testing-and-debuging)
+    - [Learn to Code in Python, Ch. 07: *Comparisons*](#learn-to-code-in-python-ch-07-comparisons)
     - [Learning Outcomes](#learning-outcomes)
     - [Applied Examples](#applied-examples)
   - [🏷️ Tags:](#️-tags)
