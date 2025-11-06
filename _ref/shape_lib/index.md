@@ -68,6 +68,8 @@ All objects assume CSS classes are defined in `main.css` and/or section-specific
     - [Verbatim Copy-Assignment-Answer Section](#verbatim-copy-assignment-answer-section)
       - [**Snippet:**](#snippet)
     - [Challenge Section](#challenge-section)
+    - [Boots' Feedback Section](#boots-feedback-section)
+  - [CORRECT! 🏆](#correct-)
   - [✅ Revision History](#-revision-history)
   
 </details>
@@ -107,7 +109,7 @@ or the tip
 
 **📈 OUTPUT RESULTS**
 
-```
+```sh
 Inputs: 0, 0, 0
 Expected: (0, 0, 0)
 Actual:   (0, 0, 0)
@@ -130,7 +132,7 @@ Pass
 
 **📈 OUTPUT RESULTS**
 
-```
+```sh
 // RESULTS_PLACEHOLDER
 ```
 ````
@@ -485,6 +487,31 @@ A new variable called `radius` is created and set to the value `5`.
 ````
 
 
+### Boots' Feedback Section
+
+<section class="boots-feeback callout"><span class="label-boots-feeback">BOOTS' FEEDBACK 👇🏽</span>
+
+**✍️ BOOTS' FEEDBACK:**
+
+## CORRECT! 🏆
+
+// CONTENT_PLACEHOLDER
+
+</section>
+
+<br>
+
+```md
+<section class="boots-feeback callout"><span class="label-boots-feeback">BOOTS' FEEDBACK 👇🏽</span>
+
+**✍️ BOOTS' FEEDBACK:**
+
+## CORRECT! 🏆
+
+// CONTENT_PLACEHOLDER
+
+</section>
+```
 
 ---
 
