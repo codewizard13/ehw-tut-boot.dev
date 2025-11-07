@@ -50,13 +50,13 @@ This is the main index file for the this course folder.
 | 05      | --              | [Testing and Debugging](01.05__Test-Debug.md) |
 | 06      | --              | [Computing](01.06__Computing.md)              |
 | 07      | --              | [Comparisons](01.07__Comparisons.md)          |
-| 08      | --              | [Loops]                                       |
-| 09      | --              | [Lists]                                       |
-| 10      | --              | [Dictionaries]                                |
-| 11      | --              | [Sets]                                        |
-| 12      | --              | [Errors]                                      |
-| 13      | --              | [Practice]                                    |
-| 14      | --              | [Quiz]                                        |
+| 08      | --              | [Loops](01.08__Loops.md)                      |
+| 09      | --              | [Lists](01.09__Lists.md)                      |
+| 10      | --              | [Dictionaries](01.10__Dictionaries.md)        |
+| 11      | --              | [Sets](01.11__Sets.md)                        |
+| 12      | --              | [Errors](01.12__Errors.md)                    |
+| 13      | --              | [Practice](01.13__Practice.md)                |
+| 14      | --              | [Quiz](01.14__Quiz.md)                        |
 
 
 ---
