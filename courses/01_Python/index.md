@@ -17,7 +17,7 @@
 | File Name                | **index.md**                             |
 | ------------------------ | ---------------------------------------- |
 | **Date Created**         | 09/25/25                                 |
-| **Date Modified**        | 10/30/25                                 |
+| **Date Modified**        | 11/07/25                                 |
 | **Platform**             | Website                                  |
 | **Channel**              | [Boot.dev](https://www.boot.dev/lessons) |
 | **Version**              | 0.01.02                                  |
