@@ -16,7 +16,7 @@
 <!-- 🧭 Navigation -->
 ### [🏚️ README](../../README.md) | [📁 Index](index.md) | [🔖 Bookmark](#bookmark)
 
-<span class="warning-banner">IN-PROGRESS: 2025-10-29</span>
+<span class="warning-banner">IN-PROGRESS: 2026-06-04</span>
 
 
 <br>
@@ -25,7 +25,7 @@
 
 <section class="ehw-doc-descr">  
 
-### Learn to Code in Python, Ch. 07: *Comparisons*
+### Learn to Code in Python, Ch. [CH_NUM]: *[Chapter Title]*
 
 These are my personal notes on **<MAIN_TOPIC_LIST>** from Boot.dev. This chapter teaches how to <write 2-3 concise sentences summarizing what the chapter teaches and why it matters in real-world contexts, and clearly showing important bolded concepts and terms>.<end with the single-line real-world application / benefits sentence included at least 3 bolded real-world application phrases (e.g., medical software, debugging complex decision trees, gaming sofware, database management, livestreaming applications, industrial (PLC) logic controls, robotics, roomba robot vaccuums, etc.)>.   
 
@@ -76,7 +76,7 @@ By the end of this chapter, I should be able to:
 - [📒 COURSE NOTES: Learn to Code in Python](#-course-notes-learn-to-code-in-python)
   - [📂 Chapter 07: **Comparisons**](#-chapter-07-comparisons)
     - [🏚️ README | 📁 Index | 🔖 Bookmark](#️-readme---index---bookmark)
-    - [Learn to Code in Python, Ch. 07: *Comparisons*](#learn-to-code-in-python-ch-07-comparisons)
+    - [Learn to Code in Python, Ch. \[CH\_NUM\]: *\[Chapter Title\]*](#learn-to-code-in-python-ch-ch_num-chapter-title)
     - [Learning Outcomes](#learning-outcomes)
     - [Applied Examples](#applied-examples)
   - [🏷️ Tags:](#️-tags)
