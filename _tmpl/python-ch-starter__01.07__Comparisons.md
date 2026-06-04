@@ -38,6 +38,7 @@ By the end of this chapter, I should be able to:
 - <Outcome 3 – debugging or preventing common issues>
 - <Outcome 4 – explaining clearly>
 - <Outcome 5 – executing essential workflows>
+- etc ...
 
 </section>
 
@@ -48,6 +49,8 @@ By the end of this chapter, I should be able to:
 | 1   | --      | -       |
 | 2   | --      | -       |
 | 3   | --      | -       |
+| etc ...   | --      | -       |
+
 
 <!-- 🏷️ RELATED TAGS -->
 <section id="sec-tags">
@@ -58,6 +61,7 @@ By the end of this chapter, I should be able to:
 - Comparison Operators
 - If-Else
 - Boolean Logic
+- etc ...
 
 </section>
 
