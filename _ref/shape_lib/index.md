@@ -70,6 +70,7 @@ All objects assume CSS classes are defined in `main.css` and/or section-specific
     - [Challenge Section](#challenge-section)
     - [Boots' Feedback Section](#boots-feedback-section)
   - [CORRECT! 🏆](#correct-)
+    - [Definition or Concept Explanation](#definition-or-concept-explanation)
   - [✅ Revision History](#-revision-history)
   
 </details>
@@ -513,6 +514,30 @@ A new variable called `radius` is created and set to the value `5`.
 </section>
 ```
 
+
+### Definition or Concept Explanation
+
+<section class="info-banner"><span>📌 [Definition_Or_Concept_Title] </span>
+
+<br>
+
+// Content Here
+
+</section>
+
+<br>
+
+```
+<section class="info-banner"><span>📌 [Definition_Or_Concept_Title] </span>
+
+<br>
+
+// Content Here
+
+</section>
+```
+
+
 ---
 
 ## ✅ Revision History
@@ -521,5 +546,6 @@ A new variable called `radius` is created and set to the value `5`.
 | ------- | ---------- | ---------------- | --------------------------------------------------------------------------------------- |
 | 1.00    | 2025-09-26 | Eric L. Hepperle | Initial draft created.                                                                  |
 | 1.02    | 2025-10-01 | Eric L. Hepperle | Add example sections (info, Boot.dev operation, error, verbatim copy) and lesson title. |
+| 1.03    | 2026-06-04 | Eric L. Hepperle | Add definition/concept section template                                                 |
 
 ---
