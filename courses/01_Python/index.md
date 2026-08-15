@@ -55,8 +55,9 @@ This is the main index file for the this course folder.
 | 10      | --              | [Dictionaries](01.10__Dictionaries.md)        |
 | 11      | --              | [Sets](01.11__Sets.md)                        |
 | 12      | --              | [Errors](01.12__Errors.md)                    |
-| 13      | --              | [Practice](01.13__Practice.md)                |
-| 14      | --              | [Quiz](01.14__Quiz.md)                        |
+| 12      | --              | [Type Hints](01.13__Errors.md)                    |
+| 13      | --              | [Practice](01.14__Practice.md)                |
+| 14      | --              | [Quiz](01.15__Quiz.md)                        |
 
 
 ---
