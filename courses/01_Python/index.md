@@ -59,5 +59,7 @@ This is the main index file for the this course folder.
 | 13      | --              | [Practice](01.14__Practice.md)                |
 | 14      | --              | [Quiz](01.15__Quiz.md)                        |
 
+## COURSE COMPLETION
 
+![Course Completed - 2026-08-15](/_pix/course-completion__PythonBeginner.jpg)
 ---
