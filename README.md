@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="../_css/main.css">
 
 <!-- 🖼️ Site Logo -->
+
 ![Site Logo](/_pix/logos/logo-ehw-kb-h32.png)
 
 # Course Notes: Boot.dev 📚
@@ -14,23 +15,22 @@
 
 ## Quick Info 📋
 
-| Attribute | Details |
-| --- | --- |
-| **Course** | [Back-end Developer Path in Python & TypeScript](https://www.boot.dev/tracks/backend-python-typescript) |
-| **Platform** | [Boot.dev](https://www.boot.dev/) |
-| **Repository** | [ehw-tut-boot.dev](https://github.com/codewizard13/ehw-tut-boot.dev.git) |
-| **Level** | Beginner to Intermediate |
-| **Type** | Self-paced, Interactive |
-| **Instructor** | Boot.dev Team |
-| **Started** | 2025-09-15 |
-| Date Modified        | 2025-09-26                        |
-| Version              | 00.01.00                          |
-| Programmer / Student | **Eric L. Hepperle**              |
+| Attribute            | Details                                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Course**           | [Back-end Developer Path in Python & TypeScript](https://www.boot.dev/tracks/backend-python-typescript) |
+| **Platform**         | [Boot.dev](https://www.boot.dev/)                                                                       |
+| **Repository**       | [ehw-tut-boot.dev](https://github.com/codewizard13/ehw-tut-boot.dev.git)                                |
+| **Level**            | Beginner to Intermediate                                                                                |
+| **Type**             | Self-paced, Interactive                                                                                 |
+| **Instructor**       | Boot.dev Team                                                                                           |
+| **Started**          | 2025-09-15                                                                                              |
+| Date Modified        | 2025-09-26                                                                                              |
+| Version              | 00.01.00                                                                                                |
+| Programmer / Student | **Eric L. Hepperle**                                                                                    |
 
 <br>
 
 ![Boot.dev Dashboard Screenshot](/_pix/screens/screen-005-courses.jpg)
-
 
 ## Overview 🎯
 
@@ -43,16 +43,19 @@ Boot.dev is a self-paced, interactive platform focused on backend development, d
 ## Getting Started 🚀
 
 ### Requirements
+
 - Web browser with JavaScript enabled
 - Boot.dev account (free or paid)
 - Internet connection
 
 ### How to Use These Notes
+
 - **Location:** Notes are in [courses/](/courses/)
 - **Organization:** Structured by learning paths, chapters, and lessons with exercises
 - **Progress:** Track metrics (XP earned, lessons completed, courses finished) as motivation
 
 ### Tips & Best Practices
+
 - Enable JavaScript for full dashboard interactivity
 - Review dashboard regularly to plan next learning path
 - Use metrics as motivational tools for progression
@@ -102,22 +105,19 @@ Boot.dev is a self-paced, interactive platform focused on backend development, d
 
 ---
 
-## Chapters 📖
+## Courses 📖
 
-| CH. | Level | Chapter Name/Title |
-| --- | --- | --- |
-| 00 | 01 | [Welcome to Learn Python](https://www.boot.dev/lessons/78b4646f-85aa-42c7-ba46-faec2f0902a9) |
-| 01 | — | Mission & Learning Paths |
-| 02 | — | Meet "Boots" AI Mentor |
-| 03 | — | Progress & Statistics |
-| 04 | — | Getting Started |
+| ORDER | Course Title               | Date Started | Date Completed |
+| ----- | -------------------------- | ------------ | -------------- |
+| 01    | Learn Python for Beginners | 2025-09-25   | 2026-08-16     |
+| 02    | Learn Linux                | 2026-08-16   | --             |
 
 ---
 
 ## Instructor 👤
 
 **Boot.dev Team**  
-Backend education through interactive learning platform  [Visit Boot.dev](https://www.boot.dev)
+Backend education through interactive learning platform [Visit Boot.dev](https://www.boot.dev)
 
 ---
 
@@ -137,7 +137,7 @@ Thanks to the Boot.dev team for designing an engaging, interactive learning expe
 
 ## License 📝
 
-This repository is licensed under the MIT License – see the [LICENSE](LICENSE) file for details. ***These notes are personal work*** based on the Boot.dev platform.
+This repository is licensed under the MIT License – see the [LICENSE](LICENSE) file for details. **_These notes are personal work_** based on the Boot.dev platform.
 
 ---
 
