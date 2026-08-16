@@ -27,7 +27,10 @@
 | Version              | 00.01.00                          |
 | Programmer / Student | **Eric L. Hepperle**              |
 
----
+<br>
+
+![Boot.dev Dashboard Screenshot](/_pix/screens/screen-005-courses.jpg)
+
 
 ## Overview 🎯
 
@@ -91,12 +94,6 @@ Boot.dev is a self-paced, interactive platform focused on backend development, d
 
 ---
 
-## Screenshots 🖼️
-
-![Boot.dev Dashboard Screenshot]("/../img/screen-boot-dev-dashboard-01.jpg")
-
----
-
 ## External Resources 🌍
 
 - [Boot.dev Official Site](https://www.boot.dev)
@@ -120,8 +117,7 @@ Boot.dev is a self-paced, interactive platform focused on backend development, d
 ## Instructor 👤
 
 **Boot.dev Team**  
-Backend education through interactive learning platform  
-[Visit Boot.dev](https://www.boot.dev)
+Backend education through interactive learning platform  [Visit Boot.dev](https://www.boot.dev)
 
 ---
 
